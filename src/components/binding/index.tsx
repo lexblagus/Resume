@@ -1,5 +1,5 @@
-import logo from './images/logo.svg'
-import './App.css'
+import logo from '../../images/logo.svg'
+import { Background, Page, Top, Header, Logo, Paper, Contents, Bottom, PageNumber, CurrentPage, TotalPages } from './styled';
 
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -30,38 +30,38 @@ Why don’t you say that three times? Within cells interlinked. Within cells int
 A system of cells.
 Within cells interlinked.`;
 
-const App = () => {
+const Binding = () => {
   return (
-    <div className="background _debug">
-
-      {[...Array(3)].map(() => (
-        <div className="paper">
-          <div className="contents">
-            <div className="page-header">
-              <img
+    <Background data-id="Background">
+      {[...Array(3)].map((_value, index, parent) => (
+        <Paper key={index} data-id="Paper">
+          <Page data-id="Page">
+            <Top data-id="Top">
+              <Logo
                 src={logo}
                 alt="Logo comopsed of an lowercase letter b within a black square"
-                className="logo"
+                data-id="Logo"
               />
-              <div className="header-contents">header</div>
-            </div>
-
-            <div className="page-contents">
+              <Header data-id="Header">Header contents</Header>
+            </Top>
+            <Contents data-id="Contents">
               <div>
                 {LOREM_IPSUM}
               </div>
-            </div>
-
-            <div className="page-footer">
-              <div className="footer-page-number">1/10</div>
-            </div>
-          </div>
-        </div>
+            </Contents>
+            <Bottom data-id="Bottom">
+              <PageNumber data-id="PageNumber">
+                <CurrentPage>
+                  {index + 1}
+                  <TotalPages>/{parent.length}</TotalPages>
+                </CurrentPage>
+              </PageNumber>
+            </Bottom>
+          </Page>
+        </Paper>
       ))}
-
-
-    </div>
+    </Background>
   )
 }
 
-export default App
+export default Binding
