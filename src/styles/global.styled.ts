@@ -12,7 +12,7 @@ html, body, #root {
 }
 
 body {
-	font-family: ${config.fonts.families.main};
+	font-family: ${config.fonts.families.body};
 	font-size: ${config.fonts.sizes.default}mm;
 }
 

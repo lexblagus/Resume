@@ -5,6 +5,7 @@ import IBMPlexSerif from './plex/serif';
 import IBMPlexMono from './plex/mono';
 import Roboto from './roboto';
 import TitilliumWeb from './titillium-web';
+import Rajdhani from './rajdhani';
 
 const fontFaces = [
 	...BodoniModa,
@@ -14,6 +15,7 @@ const fontFaces = [
 	...IBMPlexMono,
 	...Roboto,
 	...TitilliumWeb,
+	...Rajdhani,
 ].map(font => `
 @font-face {
   font-display: swap;
@@ -24,6 +26,6 @@ const fontFaces = [
     url('${source.url}') format('${source.format}')`).join(',')};
 }`).join('');
 
-console.log('fontFaces', fontFaces);
+// console.log('fontFaces', fontFaces);
 
 export default fontFaces;

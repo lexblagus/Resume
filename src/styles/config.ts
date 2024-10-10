@@ -3,6 +3,7 @@ export default {
 		foreground: 'black',
 		background: 'white',
 		accent: 'black',
+		dim: 'hsla(0, 0%, 50%, 1)',
 	},
 	fonts: {
 		families: {
@@ -14,19 +15,21 @@ export default {
 			'IBM Plex Serif'
 			'Roboto'
 			'Titillium Web'
+			'Rajdhani'
 			*/
-			main: "'IBM Plex Sans', sans-serif",
+			body: "'IBM Plex Sans', sans-serif",
+			titles: "'Rajdhani', sans-serif",
 			alternate: "'Bodoni Moda', serif",
 		},
 		sizes: {
-			default: 4,
-			pageNumber: 5,
-			totalPages: 3,
+			default: 4, // mm
+			medium: 5, // mm
+			small: 3, // mm
 		},
 	},
 	background: {
 		color: 'hsla(0, 0%, 85%, 1)',
-		margin: 2.5, // mm
+		margin: 5, // mm
 	},
 	page: {
 		width: 210, // mm

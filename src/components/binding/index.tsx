@@ -1,5 +1,5 @@
 import logo from '../../images/logo.svg'
-import { Background, Page, Top, Header, Logo, Paper, Contents, Bottom, PageNumber, CurrentPage, TotalPages } from './styled';
+import { Background, Page, Top, Header, Logo, Paper, Contents, Bottom, PageNumber, CurrentPage, TotalPages, Light, Titles } from './styled';
 
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -42,12 +42,16 @@ const Binding = () => {
                 alt="Logo comopsed of an lowercase letter b within a black square"
                 data-id="Logo"
               />
-              <Header data-id="Header">Header contents</Header>
+              <Header data-id="Header">
+                <Titles>
+                  //{' '}
+                  <Light>professional</Light>{' '}
+                  resume
+                </Titles>
+              </Header>
             </Top>
             <Contents data-id="Contents">
-              <div>
-                {LOREM_IPSUM}
-              </div>
+              {LOREM_IPSUM}
             </Contents>
             <Bottom data-id="Bottom">
               <PageNumber data-id="PageNumber">

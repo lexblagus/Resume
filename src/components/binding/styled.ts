@@ -11,7 +11,11 @@ export const Background = styled('div')(() => ({
 		rowGap: `${config.background.margin}mm`,
 		padding: `${config.background.margin}mm`,
 	},
-}));
+}), {
+	name: 'NAME_HERE',
+	id: 'ID_HERE',
+
+  });
 
 // -----------------------------------------------------------------------------
 
@@ -22,7 +26,7 @@ export const Paper = styled('div')(() => ({
 		boxShadow: `0 0 ${config.background.margin / 2}mm hsla(0, 0%, 0%, 0.5)`,
 		borderRadius: '3px',
 	},
-	width: `${config.page.width}mm`,
+	// width: `${config.page.width}mm`,
 	height: `${config.page.height}mm`,
 	padding: `${config.page.margin}mm`,
 }));
@@ -56,6 +60,21 @@ export const Logo = styled('img')(() => ({
 export const Header = styled('div')(() => ({
 	display: 'flex',
 	alignItems: 'flex-end',
+}));
+
+// -----------------------------------------------------------------------------
+
+export const Titles = styled('div')(() => ({
+	fontFamily: config.fonts.families.titles,
+	fontSize: `${config.fonts.sizes.medium}mm`,
+	fontWeight: 700,
+}));
+
+// -----------------------------------------------------------------------------
+
+export const Light = styled('span')(() => ({
+	fontWeight: 300,
+	color: config.colors.dim
 }));
 
 // -----------------------------------------------------------------------------
@@ -97,11 +116,11 @@ export const PageNumber = styled('div')(() => ({
 // -----------------------------------------------------------------------------
 
 export const CurrentPage = styled('div')(() => ({
-	fontSize: `${config.fonts.sizes.pageNumber}mm`,
+	fontSize: `${config.fonts.sizes.medium}mm`,
 }));
 
 // -----------------------------------------------------------------------------
 
 export const TotalPages = styled('span')(() => ({
-	fontSize: `${config.fonts.sizes.totalPages}mm`,
+	fontSize: `${config.fonts.sizes.small}mm`,
 }));
