@@ -43,6 +43,7 @@ export default {
 		backgroundColor: 'white',
 	},
 	layout: {
+		spacingTiny : 1, // mm
 		spacingSmall : 2.5, // mm
 		spacingMedium : 10, // mm
 		breakpoints: {

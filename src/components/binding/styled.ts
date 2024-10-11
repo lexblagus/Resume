@@ -24,7 +24,7 @@ export const Paper = styled.div`
 	}
 	min-width: 120mm;
 	max-width: ${config.page.width}mm;
-	height: ${config.page.height}mm;
+	height: ${config.page.height}mm; /* fixed page height */
 	padding: ${config.page.margin}mm;
 `;
 
@@ -33,7 +33,7 @@ export const Paper = styled.div`
 export const Page = styled.div`
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	overflow: hidden;
+	/* overflow: hidden; */
 	height: 100%;
 `;
 
@@ -87,6 +87,8 @@ export const Contents = styled.div`
 
 	${TwoCols} {
 		flex-grow: 1;
+		flex-shrink: 1;
+		overflow: hidden;
 	}
 `;
 
@@ -111,6 +113,7 @@ export const About = styled.ol`
 
 	@media (max-width: ${config.layout.breakpoints.xs}) {
 		width: fit-content;
+		align-self: flex-end;
 	}
 
 	& > li {}
@@ -132,6 +135,7 @@ export const Testemonials = styled.div`
 	}
 
 	& cite {
+		display: block;
 		font-family: ${config.fonts.families.fancy};
 		font-size: ${config.fonts.sizes.default}mm;
 		font-style: italic;
@@ -178,6 +182,29 @@ export const Testemonials = styled.div`
 // -----------------------------------------------------------------------------
 
 export const Abilities = styled.div`
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: stretch;
+	gap: 1px;
+	height: fit-content;
+	font-family: ${config.fonts.families.secondary};
+	font-size: ${config.fonts.sizes.default}mm;
+	overflow: hidden;
+
+	& div {
+		background-color: ${config.colors.light};
+		padding: ${config.layout.spacingTiny}mm;
+		display: flex;
+
+		&:nth-child(-n+2) {
+			font-weight: 600;
+		}
+
+		&:nth-child(2n) {
+			align-items: center;
+			justify-content: center;
+		}
+	}
 `;
 
 // -----------------------------------------------------------------------------
@@ -188,25 +215,6 @@ export const Bottom = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	font-size: 0.8em;
-`;
-
-// -----------------------------------------------------------------------------
-
-export const PageNumber = styled.div`
-	@media print {
-		background-color: ${config.colors.background};
-		color: ${config.colors.accent};
-		border: 1px solid ${config.colors.accent};
-	}
-	min-width: ${config.footerHeight}mm;
-	background-color: ${config.colors.accent};
-	color: ${config.colors.background};
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	padding: 0 2.5mm;
-	box-sizing: border-box;
 `;
 
 // =============================================================================
@@ -262,6 +270,25 @@ export const H1 = styled.h1`
 		font-weight: 400;
 		letter-spacing: -1mm;
 	}
+`;
+
+// -----------------------------------------------------------------------------
+
+export const PageNumber = styled.div`
+	@media print {
+		background-color: ${config.colors.background};
+		color: ${config.colors.accent};
+		border: 1px solid ${config.colors.accent};
+	}
+	min-width: ${config.footerHeight}mm;
+	background-color: ${config.colors.accent};
+	color: ${config.colors.background};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding: 0 2.5mm;
+	box-sizing: border-box;
 `;
 
 // -----------------------------------------------------------------------------

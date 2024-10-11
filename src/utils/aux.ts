@@ -11,3 +11,9 @@ export const calculateAge = (birthdate: string): number => {
 
 	return age;
 };
+
+
+export const yearsFromNow = (inputYear: number): number => {
+	const currentYear = new Date().getFullYear();
+	return currentYear - inputYear;
+};

@@ -1,7 +1,8 @@
-import { BASELINE, LOREM_IPSUM } from '../../constants/contents';
-import logo from '../../images/logo.svg'
-import { calculateAge } from '../../utils/aux';
-import { Background,
+import { Fragment } from 'react/jsx-runtime';
+import logo from '../../images/logo.svg';
+import { calculateAge, yearsFromNow } from '../../utils/aux';
+import {
+	Background,
 	Page,
 	Top,
 	Header,
@@ -14,17 +15,16 @@ import { Background,
 	TotalPages,
 	Light,
 	TagLine,
-	H1,
-	Dim,
-	TwoCols,
+	H1, TwoCols,
 	TagLineSpaced,
 	About,
 	TwoSpacedRows,
 	Unwrapable,
 	Abilities,
 	Testemonials,
-	Mild,
+	Mild
 } from './styled';
+import { LOREM_IPSUM } from '../../constants/contents';
 
 // =============================================================================
 
@@ -54,7 +54,7 @@ const Binding = () => {
 							// <Light>senior</Light>{' '}
 							web developer
 							<br />
-							<Dim>// </Dim><Light>frontend &amp; backend <Mild>(fullstack)</Mild></Light>
+							// <Light>frontend &amp; backend <Mild>(fullstack)</Mild></Light>
 						</TagLineSpaced>
 						<TwoCols>
 							<TwoSpacedRows>
@@ -71,31 +71,55 @@ const Binding = () => {
 									<li><Unwrapable>availability for</Unwrapable> <b>travel</b></li>
 								</About>
 								<Testemonials>
-									<blockquote>
-										<cite>He has been determined during the whole process, giving creative solutions for the challenges of the work.</cite>
+									{/* <blockquote>
+										<cite>I am what I am</cite>
 										<footer>
-											<div className="person">Alexandre Nakasato,</div>
-											<div className="title">founder of <b>Nicsware</b></div>
+											<div className="person">Lex,</div>
+											<div className="title">myself</div>
 										</footer>
-									</blockquote>
-									<blockquote>
-										<cite>Lex is a great professional, has a great technical knowledge, great person to work in groups and has great communication skills. Recommend to the highest levels of projects.</cite>
+									</blockquote> */}
+									{[
+										{
+											cite: <>He has been determined during the whole process, giving creative solutions for the challenges of the work.</>,
+											person: <>Alexandre Nakasato</>,
+											title: <>founder of <b>Nicsware</b></>,
+										},
+										{
+											cite: <>Lex is a great professional, has a great technical knowledge, great person to work in groups and has great communication skills. Recommend to the highest levels of projects.</>,
+											person: <>Raquel Oliveira</>,
+											title: <>services operation manager, <b>IBM</b></>,
+										},
+										{
+											cite: <>Lex is a creative person who works hard to get tasks done on time, and many times earlier than requested. His teamwork and clear personality allow a great atmosphere around and makes easy the job's getting done.</>,
+											person: <>Raul Dandolini</>,
+											title: <>senior system integration consultant, <b>Neoris</b></>,
+										},
+									].map(testemonial => (<blockquote>
+										<cite>{testemonial.cite}</cite>
 										<footer>
-											<div className="person">Raquel Oliveira,</div>
-											<div className="title">services operation manager, <b>IBM</b></div>
+											<div className="person">{testemonial.person},</div>
+											<div className="title">{testemonial.title}</div>
 										</footer>
-									</blockquote>
-									<blockquote>
-										<cite>Lex is a creative person who works hard to get tasks done on time, and many times earlier than requested. His teamwork and clear personality allow a great atmosphere around and makes easy the job's getting done.</cite>
-										<footer>
-											<div className="person">Raul Dandolini,</div>
-											<div className="title">senior system integration consultant, <b>Neoris</b></div>
-										</footer>
-									</blockquote>
+									</blockquote>))}
 								</Testemonials>
 							</TwoSpacedRows>
 							<Abilities>
-								{BASELINE}
+								<div>technology/tool</div>
+								<div>years</div>
+								{[
+									{ name: 'HTML', year: 1998 },
+									{ name: 'CSS & SCSS', year: 1998 },
+									{ name: 'Javascript & ES6', year: 2000 },
+									{ name: 'React, JSX & Redux', year: 2016 },
+									{ name: '…', year: 2024 - 45 },
+									...LOREM_IPSUM.split(/[,.kwxyz]/gim).slice(0, 25).map(word => ({
+										name: word,
+										year: Math.floor(Math.random() * (2023 - 1994 + 1)) + 1994,
+									}))
+								].map(ability => (<Fragment key={ability.name}>
+									<div>{ability.name}</div>
+									<div>{yearsFromNow(ability.year)}</div>
+								</Fragment>))}
 							</Abilities>
 						</TwoCols>
 					</Contents>
