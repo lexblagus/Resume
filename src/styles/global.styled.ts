@@ -21,6 +21,23 @@ body {
 		background-color: ${config.background.color};
 	}
 }
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover{
+	color:${config.colors.link};
+}
+a,
+a:link,
+a:visited{
+	text-decoration:none;
+}
+a:active,
+a:hover{
+	text-decoration:underline;
+}
 `;
 
 export default GlobalStyle;

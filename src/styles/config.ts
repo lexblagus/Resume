@@ -4,6 +4,9 @@ export default {
 		background: 'white',
 		accent: 'black',
 		dim: 'hsla(0, 0%, 50%, 1)',
+		quote: 'hsla(0, 0%, 75%, 1)',
+		light: 'hsla(0, 0%, 90%, 1)',
+		link: '#005E9E',
 	},
 	fonts: {
 		families: {
@@ -18,13 +21,14 @@ export default {
 			'Rajdhani'
 			*/
 			body: "'IBM Plex Sans', sans-serif",
-			titles: "'Rajdhani', sans-serif",
-			alternate: "'Bodoni Moda', serif",
+			secondary: "'Rajdhani', sans-serif",
+			fancy: "'Bodoni Moda', serif",
 		},
 		sizes: {
-			default: 4, // mm
-			medium: 5, // mm
-			small: 3, // mm
+			default: 4.5, // mm
+			medium: 6, // mm
+			small: 3.75, // mm
+			huge: 25, // mm
 		},
 	},
 	background: {
@@ -39,7 +43,11 @@ export default {
 		backgroundColor: 'white',
 	},
 	layout: {
-		columnGap : 10, // mm
+		spacingSmall : 2.5, // mm
+		spacingMedium : 10, // mm
+		breakpoints: {
+			xs : '600px',
+		},
 	},
 	logo: 25, // mm
 	footerHeight: 10, // mm
