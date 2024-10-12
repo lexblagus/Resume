@@ -45,7 +45,7 @@ export const Page = styled.div`
 export const Top = styled.div`
 	display: grid;
 	grid-template-columns: ${config.logo}mm 1fr;
-	column-gap: ${config.layout.spacing.medium}mm;
+	gap: ${config.layout.spacing.medium}mm;
 	height: ${config.logo}mm;
 `;
 

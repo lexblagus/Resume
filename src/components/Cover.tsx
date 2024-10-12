@@ -1,7 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
 import { Fragment } from 'react/jsx-runtime';
 import logo from '../images/logo.svg';
-import { calculateAge, hashString, yearsFromNow } from '../utils/aux';
+import { calculateAge, getTotalPages, hashString, yearsFromNow } from '../utils/aux';
 import { contents } from '../constants/contents';
 import { Bottom, Contents, Header, Logo, Page, Paper, Top } from '../styles/structure.styled';
 import { TwoCols, TwoSpacedRows, About, Testemonials, Abilities } from '../styles/cover.styled';
@@ -47,6 +47,7 @@ const Cover = () => {
 								<li><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></li>
 								<li><br /></li>
 								<li><b>{calculateAge('1978-11-12')}</b> years old</li>
+								<li><b>{calculateAge('1999-04-12')}</b> years of work experience</li>
 								<li>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></li>
 								<li>in <Unwrapable><b>Vila Madalena</b></Unwrapable>, <Unwrapable>ZIP 05451-010</Unwrapable></li>
 								<li><b>Portuguese</b> as <Unwrapable>native language</Unwrapable></li>
@@ -89,7 +90,7 @@ const Cover = () => {
 					<PageNumber>
 						<CurrentPage>
 							1
-							<TotalPages>/{config.page.total}</TotalPages>
+							<TotalPages>/{getTotalPages(contents)}</TotalPages>
 						</CurrentPage>
 					</PageNumber>
 				</Bottom>}

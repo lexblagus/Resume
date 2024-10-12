@@ -21,7 +21,7 @@ export default {
 			'Titillium Web'
 			'Rajdhani'
 			*/
-			body: "'IBM Plex Sans', sans-serif",
+			body: "serif",
 			secondary: "'Rajdhani', sans-serif",
 			fancy: "'Bodoni Moda', serif",
 		},
@@ -43,7 +43,6 @@ export default {
 		margin: 10, // mm
 		borderColor: 'hsla(0, 0%, 50%, 1)',
 		backgroundColor: 'white',
-		total: 99,
 	},
 	layout: {
 		spacing: {

@@ -1,5 +1,6 @@
 import { Background } from '../styles/structure.styled';
 import Cover from './Cover';
+import PastExperience from './PastExperience';
 import RelevantExperience from './RelevantExperience';
 
 // =============================================================================
@@ -9,6 +10,7 @@ const Binding = () => {
 		<Background>
 			<Cover />
 			<RelevantExperience />
+			<PastExperience />
 		</Background>
 	)
 }

@@ -91,6 +91,7 @@ export const H3 = styled.h3`
 
 	& > .slashes{
 		font-family: ${config.fonts.families.secondary};
+		font-size: 1.175em;
 		font-weight: 700;
 		color: ${config.colors.dim};
 	}

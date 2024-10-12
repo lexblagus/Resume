@@ -1,5 +1,3 @@
-import { css } from "styled-components";
-
 export const calculateAge = (birthdate: string): number => {
 	const today = new Date();
 	const birthDate = new Date(birthdate);
@@ -23,12 +21,34 @@ export const yearsFromNow = (inputYear: number): number => {
 
 // -----------------------------------------------------------------------------
 
-export const getYearsBetween = (startMonth: number, startYear: number, endMonth: number, endYear: number): number => {
-	const startDate = new Date(startYear, startMonth - 1);
-	const endDate = new Date(endYear, endMonth - 1);
-	const diffInMs = endDate.getTime() - startDate.getTime();
-	const msInYear = 1000 * 60 * 60 * 24 * 365.25;
-	return diffInMs / msInYear;
+export const calculateMonths = (
+	startMonth: number,
+	startYear: number,
+	endMonth: number,
+	endYear: number,
+): number => {
+	const totalMonthsStart = startYear * 12 + startMonth;
+	const totalMonthsEnd = endYear * 12 + endMonth;
+	return totalMonthsEnd - totalMonthsStart;
+};
+
+// -----------------------------------------------------------------------------
+
+export const amountOfTime = (
+	startMonth: number,
+	startYear: number,
+	endMonth: number,
+	endYear: number,
+): string => {
+	const months = calculateMonths(startMonth, startYear, endMonth, endYear);
+	if(months < 12){
+		return `${months} months`;
+	}
+	const suffix = Math.floor(months / 12) <= 1 ? 'year': 'years'
+	if(Number.isInteger(months / 12)){
+		return `${months / 12} ${suffix}`;
+	}
+	return `>${Math.floor(months / 12)} ${suffix}`;
 };
 
 // -----------------------------------------------------------------------------
@@ -89,29 +109,4 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const debugLayout = () => {
-	const width = 210 - 1;
-	const height = 297 -1;
-	const unit = 'mm';
-	const color1 = 'hsla(0, 0%, 75%, 0.25)';
-	const color2 = 'hsla(0, 0%, 25%, 0.25)';
-	const steps = 4;  // Number of steps for the gradient
-
-	const generateGradient = (direction: string, size: number) => {
-		let gradient = `repeating-linear-gradient(to ${direction},`;
-		for (let i = 0; i < steps; i++) {
-			const pos1 = i * size;
-			const pos2 = (i + 1) * size;
-			const color = i % 2 === 0 ? color1 : color2;
-			gradient += `
-				${color} ${pos1}${unit},
-				${color} ${pos2}${unit}${i < steps - 1 ? ',' : ''}`;
-		}
-		gradient += ')';
-		return gradient;
-	};
-
-	return css`
-		background-image: ${generateGradient('bottom', height)}, ${generateGradient('right', width)};
-	`;
-};
+export const getTotalPages = (contents) => 1 + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
