@@ -6,6 +6,7 @@ export default {
 		dim: 'hsla(0, 0%, 50%, 1)',
 		quote: 'hsla(0, 0%, 75%, 1)',
 		light: 'hsla(0, 0%, 90%, 1)',
+		dark: 'hsla(0, 0%, 30%, 1)',
 		link: '#005E9E',
 	},
 	fonts: {
@@ -25,10 +26,11 @@ export default {
 			fancy: "'Bodoni Moda', serif",
 		},
 		sizes: {
+			small: 4, // mm
 			default: 4.5, // mm
 			medium: 6, // mm
-			small: 3.75, // mm
-			huge: 25, // mm
+			large: 10, // mm
+			huge: 23.75, // mm
 		},
 	},
 	background: {
@@ -41,15 +43,21 @@ export default {
 		margin: 10, // mm
 		borderColor: 'hsla(0, 0%, 50%, 1)',
 		backgroundColor: 'white',
+		total: 99,
 	},
 	layout: {
-		spacingTiny : 1, // mm
-		spacingSmall : 2.5, // mm
-		spacingMedium : 10, // mm
+		spacing: {
+			micro: 1, // mm
+			tiny : 2.5, // mm
+			small : 5, // mm
+			medium : 10, // mm	
+		},
 		breakpoints: {
 			xs : '600px',
 		},
 	},
 	logo: 25, // mm
-	footerHeight: 10, // mm
+	footer: {
+		height: 10, // mm
+	}
 };
