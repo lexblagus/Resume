@@ -109,4 +109,4 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const getTotalPages = (contents) => 1 + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
+export const getTotalPages = (contents) => contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;

@@ -11,8 +11,9 @@ export const TagLine = styled.div`
 `;
 
 export const TagLineSpaced = styled(TagLine)`
-	margin-top: 0.75em;
+	margin-top: 1.2em;
 	margin-bottom: ${config.layout.spacing.medium}mm;
+	line-height: 0.75em;
 `;
 
 // -----------------------------------------------------------------------------

@@ -32,38 +32,30 @@ const Cover = () => {
 				<Contents>
 					<H1><Light>alexander</Light> blagus</H1>
 					<TagLineSpaced>
-						// <Light>senior</Light>{' '}
-						web developer
-						<br />
-						<Light>
-							<Mild>//</Mild> frontend &amp; backend: <Mild>fullstack</Mild>
-						</Light>
+						<Unwrapable>
+							//{' '}
+							<Light>senior</Light>{' '}
+							web developer
+						</Unwrapable>
+						{' '}
+						<Unwrapable>
+							<Small>
+								<Light>
+									frontend &amp; backend{' '}
+									<Mild>(fullstack)</Mild>
+								</Light>
+							</Small>
+						</Unwrapable>
+
 					</TagLineSpaced>
 					<TwoCols>
 						<TwoSpacedRows>
 							<About>
-								<li>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></li>
-								<li><a href="mailto:lex@blag.us"><Unwrapable><b>lex@</b>blag.us</Unwrapable></a></li>
-								<li><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></li>
-								<li><br /></li>
-								<li><b>{calculateAge('1978-11-12')}</b> years old</li>
-								<li><b>{calculateAge('1999-04-12')}</b> years of work experience</li>
-								<li>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></li>
-								<li>in <Unwrapable><b>Vila Madalena</b></Unwrapable>, <Unwrapable>ZIP 05451-010</Unwrapable></li>
-								<li><b>Portuguese</b> as <Unwrapable>native language</Unwrapable></li>
-								<li><Unwrapable>fluent in</Unwrapable> <b>English</b></li>
-								<li><Unwrapable>availability for</Unwrapable> <b>travel</b></li>
+								{contents.about.map(content => (
+									<li key={hashString(ReactDOMServer.renderToString(content))}>{content}</li>
+								))}
 							</About>
 							<Testemonials>
-								{/*
-								<blockquote>
-									<cite>I am what I am</cite>
-									<footer>
-										<div className="person">Lex,</div>
-										<div className="title">myself</div>
-									</footer>
-								</blockquote>
-								*/}
 								{contents.testemonials.map(testemonial => (
 									<blockquote key={hashString(ReactDOMServer.renderToString(testemonial.cite))}>
 										<cite>{testemonial.cite}</cite>

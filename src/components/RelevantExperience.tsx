@@ -90,7 +90,7 @@ const RelevantExperience = () => {
 						<Bottom>
 							<PageNumber>
 								<CurrentPage>
-									{2 + index}
+									{contents.experience.distribution.pre + index + 1}
 									<TotalPages>/{getTotalPages(contents)}</TotalPages>
 								</CurrentPage>
 							</PageNumber>

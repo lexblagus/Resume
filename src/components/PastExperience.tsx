@@ -1,8 +1,7 @@
 import logo from '../images/logo.svg';
-import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, H4, Small } from '../styles/etc.styled';
+import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, Small } from '../styles/etc.styled';
 import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/structure.styled';
-import config from '../styles/config';
-import { contents, LOREM_IPSUM } from '../constants/contents';
+import { contents } from '../constants/contents';
 import { LastExperiences, SpacedRows, SummaryLabel, TwoCols } from '../styles/experience.styled';
 import { Fragment } from 'react/jsx-runtime';
 import { getTotalPages, hashString, monthAbbr } from '../utils/aux';
@@ -97,7 +96,7 @@ const PastExperience = () => {
 				<Bottom>
 					<PageNumber>
 						<CurrentPage>
-							{1 + contents.experience.distribution.relevant.length + i + 1}
+							{contents.experience.distribution.pre + contents.experience.distribution.relevant.length + i + 1}
 							<TotalPages>/{getTotalPages(contents)}</TotalPages>
 						</CurrentPage>
 					</PageNumber>

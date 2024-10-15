@@ -109,7 +109,7 @@ export const Abilities = styled.div`
 	grid-template-columns: 1fr auto;
 	align-items: stretch;
 	gap: 1px;
-	height: fit-content;
+	/* height: fit-content; */
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.default}mm;
 	overflow: hidden;

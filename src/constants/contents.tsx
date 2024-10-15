@@ -1,4 +1,5 @@
-import { amountOfTime } from "../utils/aux";
+import { Unwrapable } from "../styles/etc.styled";
+import { amountOfTime, calculateAge } from "../utils/aux";
 
 // =============================================================================
 
@@ -36,6 +37,19 @@ Within cells interlinked.`;
 // -----------------------------------------------------------------------------
 
 export const contents = {
+	about: [
+		<>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
+		<><a href="mailto:lex@blag.us"><Unwrapable><b>lex@</b>blag.us</Unwrapable></a></>,
+		<><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
+		<><br /></>,
+		<><b>{calculateAge('1978-11-12')}</b> years old</>,
+		<><b>{calculateAge('1999-04-12')}</b> years of work experience</>,
+		<>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></>,
+		<>in <Unwrapable><b>Vila Madalena</b></Unwrapable>, <Unwrapable>ZIP 05451-010</Unwrapable></>,
+		<><b>Portuguese</b> as <Unwrapable>native language</Unwrapable></>,
+		<><Unwrapable>fluent in</Unwrapable> <b>English</b></>,
+		<><Unwrapable>availability for</Unwrapable> <b>travel</b></>,
+	],
 	testemonials: [
 		{
 			cite: <>He has been determined during the whole process, giving creative solutions for the challenges of the work.</>,
@@ -57,32 +71,37 @@ export const contents = {
 		{ "name": "HTML", "year": 1999 },
 		{ "name": "CSS & SCSS", "year": 1999 },
 		{ "name": "Javascript & ES6", "year": 2001 },
-		{ "name": "React & Redux", "year": 2019 },
+		{ "name": "Typescript", "year": 2022 },
+		// { "name": "Styled components", "year": 2022 },
+		{ "name": "React & JSX", "year": 2019 },
+		{ "name": "Redux", "year": 2019 },
 		{ "name": "jQuery", "year": 2005 },
 		{ "name": "NodeJS & ExpressJS", "year": 2013 },
 		{ "name": "HTTP & RESTful APIs", "year": 2013 },
 		{ "name": "WebSockets", "year": 2020 },
 		{ "name": "Package Builders: Webpack, NextJS, Gulp", "year": 2017 },
-		{ "name": "TDD: Jest, Mocha, Chai, Sinon, …", "year": 2017 },
+		{ "name": "Unitary: Jest, Mocha, …", "year": 2017 }, // Chai, Sinon
+		{ "name": "E2E: Playwright, …", "year": 2023 },
 		{ "name": "Git & SVN", "year": 2005 },
 		{ "name": "Jenkins/GoCD", "year": 2017 },
 		{ "name": "AWS: ECS, EC2, DynamoDB, Lambda, …", "year": 2013 },
-		{ "name": "Apache & Nginx", "year": 2001 },
+		// { "name": "Apache & Nginx", "year": 2001 },
 		{ "name": "Telemetrics: Splunk, NewRelic", "year": 2019 },
 		{ "name": "Bash", "year": 2015 },
-		{ "name": "Microsoft .Net C#", "year": 2006 },
-		{ "name": "PHP", "year": 2004 },
+		// { "name": "Microsoft .Net C#", "year": 2006 },
+		// { "name": "PHP", "year": 2004 },
 		{ "name": "Neo4J & Cypher", "year": 2013 },
 		{ "name": "Oracle", "year": 2002 },
 		{ "name": "Microsoft SQL Server", "year": 2005 },
 		{ "name": "MySQL", "year": 2004 },
-		{ "name": "Windows Server", "year": 2002 },
-		{ "name": "Linux / MacOS", "year": 2011 },
-		{ "name": "Adobe Photoshop, Illustrator, InDesign, …", "year": 1997 },
-		{ "name": "Excel / Spreadsheets", "year": 2002 }
+		// { "name": "Windows Server", "year": 2002 },
+		// { "name": "Linux / MacOS", "year": 2011 },
+		// { "name": "Adobe Photoshop, Illustrator, InDesign, …", "year": 1997 },
+		// { "name": "Excel / Spreadsheets", "year": 2002 }
 	],
 	experience: {
 		distribution: {
+			pre: 1, // cover and technologies
 			relevant: [0, 1],
 			past: [
 				[2, 3],

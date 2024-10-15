@@ -27,7 +27,7 @@ export const Paper = styled.div`
 		border-radius: 3px;
 	}
 	max-width: ${config.page.width}mm;
-	height: ${config.page.height}mm; /* fixed page height */
+	min-height: ${config.page.height}mm; /* fixed page height */
 	padding: ${config.page.margin}mm;
 	box-sizing: border-box;
 `;
