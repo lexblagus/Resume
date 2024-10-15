@@ -1,3 +1,7 @@
+import { Fragment } from 'react/jsx-runtime';
+import ReactDOMServer from "react-dom/server";
+import { Contents } from "../constants/contents";
+
 export const calculateAge = (birthdate: string): number => {
 	const today = new Date();
 	const birthDate = new Date(birthdate);
@@ -109,4 +113,23 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const getTotalPages = (contents) => contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
+export const contentToKey = (content: Object | Array<string | number> | string | JSX.Element) => hashString(ReactDOMServer.renderToString(JSON.stringify(content)))
+
+// -----------------------------------------------------------------------------
+
+export const getTotalPages = (contents: Contents) => contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
+
+// -----------------------------------------------------------------------------
+
+export const joinElements = (contents: (string | JSX.Element)[]): JSX.Element => (<Fragment>{
+	contents.map((item, index) => (
+		<Fragment key={contentToKey(item)}>
+			{item}
+			{index + 1 < contents.length ? (
+				<>, </>
+			) : (
+				<>.</>
+			)}
+		</Fragment>
+	))
+}</Fragment>)

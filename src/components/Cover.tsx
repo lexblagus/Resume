@@ -1,12 +1,10 @@
-import ReactDOMServer from 'react-dom/server';
 import { Fragment } from 'react/jsx-runtime';
 import logo from '../images/logo.svg';
-import { calculateAge, getTotalPages, hashString, yearsFromNow } from '../utils/aux';
+import { contentToKey, getTotalPages, yearsFromNow } from '../utils/aux';
 import { contents } from '../constants/contents';
 import { Bottom, Contents, Header, Logo, Page, Paper, Top } from '../styles/structure.styled';
 import { TwoCols, TwoSpacedRows, About, Testemonials, Abilities } from '../styles/cover.styled';
 import { TagLine, Light, H1, TagLineSpaced, Mild, Unwrapable, PageNumber, CurrentPage, TotalPages, Small } from '../styles/etc.styled';
-import config from '../styles/config';
 
 // =============================================================================
 
@@ -52,12 +50,16 @@ const Cover = () => {
 						<TwoSpacedRows>
 							<About>
 								{contents.about.map(content => (
-									<li key={hashString(ReactDOMServer.renderToString(content))}>{content}</li>
+									<li
+										key={contentToKey(content)}
+									>
+										{content}
+									</li>
 								))}
 							</About>
 							<Testemonials>
 								{contents.testemonials.map(testemonial => (
-									<blockquote key={hashString(ReactDOMServer.renderToString(testemonial.cite))}>
+									<blockquote key={contentToKey(testemonial.cite)}>
 										<cite>{testemonial.cite}</cite>
 										<footer>
 											<div className="person">{testemonial.person},</div>
@@ -68,9 +70,9 @@ const Cover = () => {
 							</Testemonials>
 						</TwoSpacedRows>
 						<Abilities>
-							<div>technology/tool</div>
+							<div>technology</div>
 							<div>years</div>
-							{contents.abilities.map(ability => (<Fragment key={hashString(JSON.stringify(ability))}>
+							{contents.abilities.map(ability => (<Fragment key={contentToKey(ability)}>
 								<div>{ability.name}</div>
 								<div>{yearsFromNow(ability.year)}</div>
 							</Fragment>))}

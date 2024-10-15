@@ -24,7 +24,7 @@ export const Paper = styled.div`
 		border: solid 1px ${config.page.borderColor};
 		background-color: ${config.colors.background};
 		box-shadow: 0 0 ${config.background.margin / 2}mm hsla(0, 0%, 0%, 0.5);
-		border-radius: 3px;
+		border-radius: ${config.layout.borderRadius};
 	}
 	max-width: ${config.page.width}mm;
 	min-height: ${config.page.height}mm; /* fixed page height */
@@ -90,9 +90,10 @@ export const Contents = styled.div`
 // -----------------------------------------------------------------------------
 
 export const Bottom = styled.div`
-	margin-top: ${config.layout.spacing.medium}mm;
+	display: none;
+	/* display: flex; */
 	height: ${config.footer.height}mm;
-	display: flex;
+	margin-top: ${config.layout.spacing.medium}mm;
 	justify-content: flex-end;
 	font-size: 0.8em;
 `;

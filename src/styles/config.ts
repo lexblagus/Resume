@@ -54,6 +54,8 @@ export default {
 		breakpoints: {
 			xs : '600px',
 		},
+		borderRadius: '2px',
+
 	},
 	logo: 25, // mm
 	footer: {

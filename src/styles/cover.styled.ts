@@ -33,6 +33,7 @@ export const About = styled.ol`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.default}mm;
 	border: 1px solid ${config.colors.dim};
+	border-radius: ${config.layout.borderRadius};
 
 	@media (max-width: ${config.layout.breakpoints.xs}) {
 		width: fit-content;
@@ -111,22 +112,24 @@ export const Abilities = styled.div`
 	gap: 1px;
 	/* height: fit-content; */
 	font-family: ${config.fonts.families.secondary};
-	font-size: ${config.fonts.sizes.default}mm;
+	font-size: ${config.fonts.sizes.small}mm;
+	line-height: 0.9em;
 	overflow: hidden;
 	border: 1px solid ${config.colors.dim};
 	padding: 1px;
+	border-radius: ${config.layout.borderRadius};
 
 	& div {
 		background-color: ${config.colors.light};
 		padding: ${config.layout.spacing.micro}mm;
 		display: flex;
+		align-items: center;
 
 		&:nth-child(-n+2) {
 			font-weight: 600;
 		}
 
 		&:nth-child(2n) {
-			align-items: center;
 			justify-content: center;
 		}
 	}

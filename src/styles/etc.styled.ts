@@ -40,6 +40,11 @@ export const Small = styled.span`
 	font-size: ${config.fonts.sizes.small}mm;
 `;
 
+export const Abbr = styled.span`
+	font-size: 0.8em;
+	text-transform: uppercase;
+`;
+
 // -----------------------------------------------------------------------------
 
 export const H1 = styled.h1`

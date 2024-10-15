@@ -3,8 +3,7 @@ import { contents } from '../constants/contents';
 import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, H4 } from '../styles/etc.styled';
 import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/structure.styled';
 import { LastExperiences, SpacedRows, Summary } from '../styles/experience.styled';
-import { getTotalPages, hashString, monthAbbr } from '../utils/aux';
-import config from '../styles/config';
+import { contentToKey, getTotalPages, joinElements, monthAbbr } from '../utils/aux';
 
 // =============================================================================
 
@@ -13,7 +12,7 @@ const RelevantExperience = () => {
 		contents.experience.distribution.relevant.map(index => {
 			const experience = contents.experience.data[index];
 			return (
-				<Paper key={hashString(experience.company)}>
+				<Paper key={contentToKey(experience.company)}>
 					<Page>
 						{/* ------------------------------------------------------------------------ */}
 						<Top>
@@ -49,17 +48,18 @@ const RelevantExperience = () => {
 									<li><b>About:</b>{' '}{experience.about}</li>
 								)}
 								{experience.clients.length > 0 && (
-									<li><b>Clients:</b>{' '}{experience.clients.join(', ')}.</li>
+									<li>
+										<b>Clients:</b>{' '}{joinElements(experience.clients)}
+									</li>
 								)}
 							</Summary>
-
 							<SpacedRows>
 								{experience.attributions.length > 0 && (
 									<div>
 										<H4>Attributions</H4>
 										<LastExperiences className='attributions'>
 											{experience.attributions.map((attribution, index) => (
-												<li key={hashString(attribution)}>{attribution}{index === experience.attributions.length - 1 ? '.' : ';'}</li>
+												<li key={contentToKey(attribution)}>{attribution}{index === experience.attributions.length - 1 ? '.' : ';'}</li>
 											))}
 										</LastExperiences>
 									</div>
@@ -69,7 +69,7 @@ const RelevantExperience = () => {
 										<H4>Achievements</H4>
 										<LastExperiences className='achievements'>
 											{experience.achievements.map((achievement, index) => (
-												<li key={hashString(achievement)}>{achievement}{index === experience.achievements.length - 1 ? '.' : ';'}</li>
+												<li key={contentToKey(achievement)}>{achievement}{index === experience.achievements.length - 1 ? '.' : ';'}</li>
 											))}
 										</LastExperiences>
 									</div>
@@ -79,7 +79,7 @@ const RelevantExperience = () => {
 										<H4>Technologies</H4>
 										<LastExperiences className='technologies'>
 											{experience.technologies.map((technology, index) => (
-												<li key={hashString(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
+												<li key={contentToKey(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
 											))}
 										</LastExperiences>
 									</div>

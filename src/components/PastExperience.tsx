@@ -4,13 +4,13 @@ import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/stru
 import { contents } from '../constants/contents';
 import { LastExperiences, SpacedRows, SummaryLabel, TwoCols } from '../styles/experience.styled';
 import { Fragment } from 'react/jsx-runtime';
-import { getTotalPages, hashString, monthAbbr } from '../utils/aux';
+import { contentToKey, getTotalPages, joinElements, monthAbbr } from '../utils/aux';
 
 // =============================================================================
 
 const PastExperience = () => {
 	return contents.experience.distribution.past.map((pastIndexes, i) => (
-		<Paper key={pastIndexes.join('.')}>
+		<Paper key={contentToKey(pastIndexes)}>
 			<Page>
 				{/* ------------------------------------------------------------------------ */}
 				<Top>
@@ -33,8 +33,7 @@ const PastExperience = () => {
 						{pastIndexes.map(index => {
 							const experience = contents.experience.data[index];
 							return (
-
-								<Fragment key={hashString(experience.company)}>
+								<Fragment key={contentToKey(experience.company)}>
 									<div>
 										<SummaryLabel>
 											<div>
@@ -56,7 +55,7 @@ const PastExperience = () => {
 										<SpacedRows className='tiny'>
 											<LastExperiences className='achievements'>
 												{experience.achievements.map((achievement, idx) => (
-													<li key={hashString(achievement)}>
+													<li key={contentToKey(achievement)}>
 														<Small>
 															{achievement}
 															{idx === experience.achievements.length - 1 ? '.' : ';'}
@@ -68,7 +67,7 @@ const PastExperience = () => {
 												<li className='single'>
 													<Small>
 														<b>Technologies: </b>
-														{experience.technologies.join(', ')}.
+														{joinElements(experience.technologies)}
 													</Small>
 												</li>
 											</LastExperiences>
@@ -77,17 +76,14 @@ const PastExperience = () => {
 													<li className='single'>
 														<Small>
 															<b>Clients: </b>
-															{experience.clients.join(', ')}.
+															{joinElements(experience.clients)}
 														</Small>
 													</li>
 												</LastExperiences>
 											)}
 										</SpacedRows>
-
 									</div>
 								</Fragment>
-
-
 							);
 						})}
 					</TwoCols>

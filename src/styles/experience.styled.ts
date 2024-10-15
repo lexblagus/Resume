@@ -12,6 +12,7 @@ export const Summary = styled.ol`
 	list-style-type: none;
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.small}mm;
+	border-radius: ${config.layout.borderRadius};
 
 	& > li {
 		margin-top: ${config.layout.spacing.micro}mm;
@@ -98,6 +99,7 @@ export const SummaryLabel = styled.div`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.small}mm;
 	overflow: hidden;
+	border-radius: ${config.layout.borderRadius};
 
 	${H3} {
 		font-size: ${config.fonts.sizes.medium}mm;
