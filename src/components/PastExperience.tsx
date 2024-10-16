@@ -1,5 +1,5 @@
 import logo from '../images/logo.svg';
-import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, Small, Tiny } from '../styles/etc.styled';
+import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, Tiny } from '../styles/etc.styled';
 import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/structure.styled';
 import { contents } from '../constants/contents';
 import { PastExperiences, Experience, SummaryLabel, TwoCols } from '../styles/experience.styled';

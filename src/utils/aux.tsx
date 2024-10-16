@@ -2,6 +2,8 @@ import { Fragment } from 'react/jsx-runtime';
 import ReactDOMServer from "react-dom/server";
 import { Contents } from "../constants/contents";
 
+// =============================================================================
+
 export const calculateAge = (birthdate: string): number => {
 	const today = new Date();
 	const birthDate = new Date(birthdate);
