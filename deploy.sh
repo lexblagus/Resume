@@ -58,7 +58,7 @@ else
   echo "Upload & publish to $(cat secret/host)"
   echo '--------------------------------------------------------------------------------'
 
-  sshpass -f secret/pass scp -P $(cat secret/port) ./deploy/$ARCHIVE $(cat secret/host):$REMOTE_PATH
+  sshpass -f secret/pass scp -P $(cat secret/port) ./deploy/$ARCHIVE $(cat secret/user)@$(cat secret/host):$REMOTE_PATH
   rm -rf ./deploy
   sshpass -f secret/pass ssh $(cat secret/user)@$(cat secret/host) -p $(cat secret/port) "cd $REMOTE_PATH && rm -rf ./dist && unzip ./$ARCHIVE && rm ./$ARCHIVE"
 
