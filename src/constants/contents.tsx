@@ -161,9 +161,8 @@ export const contents = {
 					<>Next</>,
 					<>SQL and TypeORM</>,
 					<>MUI (Material UI) and Styled components</>,
-					<>MetaMask</>,
 					<>Web3.js, bn.js</>,
-					<>Metamask and Phantom wallet</>,
+					<>Metamask and Phantom wallets</>,
 					<>Truffle suit with Ganache</>,
 					<>Jest and Playwright</>,
 				],
@@ -459,6 +458,7 @@ export const contents = {
 					<>HTML & CSS</>,
 					<>Javascript</>,
 					<>Microsoft ASP & IIS</>,
+					<>Oracle RDBMS</>,
 				],
 			},
 		].map(experience => ({
