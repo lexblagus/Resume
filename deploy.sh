@@ -44,7 +44,7 @@ zip -r ./deploy/$ARCHIVE ./dist
 rm -rf ./dist
 
 
-if [ ! -f secret/port ] || [ ! -f secret/host ] || [ ! -f secret/pass ]; then
+if [ ! -f secret/port ] || [ ! -f secret/host ] || [ ! -f secret/user ] || [ ! -f secret/pass ]; then
   echo ''
   echo '--------------------------------------------------------------------------------'
   echo 'Missing files in "secret": host (with user), pass and port'
