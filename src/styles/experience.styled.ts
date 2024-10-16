@@ -41,7 +41,6 @@ export const SpacedRows = styled.div`
 // -----------------------------------------------------------------------------
 
 export const PastExperiences = styled.div`
-	clear: both;
 	margin-bottom: ${config.layout.spacing.medium}mm;
 `;
 
@@ -54,7 +53,6 @@ export const Experience = styled.ol`
 	display: grid;
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.small}mm;
-	/* background-color: yellow; */
 
 	& > li {
 		&:before {
@@ -80,7 +78,6 @@ export const Experience = styled.ol`
 	}
 	&.technologies  > li:before {
 		content: '■';
-		/* font-size: 1.1em; */
 	}
 	&.clients  > li:before {
 		content: '◆';
@@ -91,25 +88,17 @@ export const Experience = styled.ol`
 
 export const TwoCols = styled.div`
 	display: grid;
-	grid-template-columns: 45mm 1fr;
-	gap: ${config.layout.spacing.medium}mm;
+	grid-template-columns: auto 1fr;
+	row-gap: ${config.layout.spacing.medium}mm;
+	column-gap: ${config.layout.spacing.tiny}mm;
 `;
 
 // -----------------------------------------------------------------------------
 
 export const SummaryLabel = styled.div`
-	/*
-	display: flex;
-	flex-direction: column;
-	gap: ${config.layout.spacing.tiny}mm;
-	width: auto;
-	*/
 	width: ${config.elements.smallBox}mm;
 	min-height: ${config.elements.smallBox}mm;
-	float: left;
-	margin-right: ${config.layout.spacing.tiny}mm;
 	box-sizing: border-box;
-
 	background-color: ${config.colors.light};
 	border: 1px solid ${config.colors.dim};
 	padding: ${config.layout.spacing.tiny}mm;
@@ -121,8 +110,6 @@ export const SummaryLabel = styled.div`
 	${H3} {
 		font-size: ${config.fonts.sizes.medium}mm;
 		font-weight: 600;
-		/* letter-spacing: normal; */
-		/* word-spacing: normal; */
 	}
 `;
 

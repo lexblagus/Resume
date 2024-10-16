@@ -7,7 +7,6 @@ export const TagLine = styled.div`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.medium}mm;
 	font-weight: 700;
-	/* text-align: right; */
 `;
 
 export const TagLineSpaced = styled(TagLine)`
@@ -40,6 +39,10 @@ export const Small = styled.span`
 	font-size: ${config.fonts.sizes.small}mm;
 `;
 
+export const Tiny = styled.span`
+	font-size: ${config.fonts.sizes.tiny}mm;
+`;
+
 export const Abbr = styled.span`
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -68,13 +71,8 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.large}mm;
-	/* color: ${config.colors.background}; */
-	/* background-color: ${config.colors.foreground}; */
-	/* border-bottom: ${config.layout.spacing.micro}mm solid ${config.colors.foreground}; */
-	/* padding: ${config.layout.spacing.tiny}mm; */
 	margin: 0;
 	flex-grow: 1;
-	/* text-align: right; */
 
 	@media print {
 		color: ${config.colors.foreground};

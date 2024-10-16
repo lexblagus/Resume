@@ -66,7 +66,6 @@ export const Logo = styled.img`
 export const Header = styled.div`
 	display: flex;
 	align-items: flex-end;
-	/* justify-content: flex-end; */
 `;
 
 // -----------------------------------------------------------------------------
@@ -97,8 +96,8 @@ export const Contents = styled.div`
 
 export const Bottom = styled.div`
 	display: flex;
-	/* height: ${config.footer.height}mm; */
-	/* margin-top: ${config.layout.spacing.medium}mm; */
+	height: ${config.footer.height}mm;
+	margin-top: ${config.layout.spacing.medium}mm;
 	justify-content: flex-end;
 	font-size: 0.8em;
 `;

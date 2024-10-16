@@ -99,7 +99,6 @@ export const Testemonials = styled.div`
 			font-size: ${config.fonts.sizes.tiny}mm;
 			font-weight: 400;
 			& b {
-				/* color: ${config.colors.dark}; */
 			}
 		}
 
