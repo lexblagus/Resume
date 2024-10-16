@@ -115,7 +115,7 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const contentToKey = (content: Object | Array<string | number> | string | JSX.Element) => hashString(ReactDOMServer.renderToString(JSON.stringify(content)))
+export const contentToKey = (content: object | Array<string | number> | string | JSX.Element) => hashString(ReactDOMServer.renderToString(JSON.stringify(content)))
 
 // -----------------------------------------------------------------------------
 

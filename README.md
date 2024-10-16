@@ -4,7 +4,7 @@
 
 Resume in React, Vite and Styled Components with beautifull layout for print and web.
 
-# Install
+## Install
 
 Clone the repo and then:
 
@@ -13,3 +13,6 @@ Clone the repo and then:
 - npm run dev
 - dial [http://localhost:8090/](http://localhost:8090/) on your browser
 
+## On the web
+
+Live version at [http://resume.blag.us/](http://resume.blag.us/)
