@@ -26,11 +26,12 @@ export default {
 			fancy: "'Bodoni Moda', serif",
 		},
 		sizes: {
+			tiny: 3.5, // mm
 			small: 4, // mm
 			default: 4.5, // mm
 			medium: 6, // mm
 			large: 10, // mm
-			huge: 23.75, // mm
+			huge: 21, // mm
 		},
 	},
 	background: {
@@ -55,9 +56,11 @@ export default {
 			xs : '600px',
 		},
 		borderRadius: '2px',
-
 	},
-	logo: 25, // mm
+	elements: {
+		logo: 20, // mm
+		smallBox: 42.5, // mm
+	},
 	footer: {
 		height: 10, // mm
 	}

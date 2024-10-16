@@ -31,7 +31,7 @@ export const About = styled.ol`
 	margin: 0;
 	list-style-type:none;
 	font-family: ${config.fonts.families.secondary};
-	font-size: ${config.fonts.sizes.default}mm;
+	font-size: ${config.fonts.sizes.small}mm;
 	border: 1px solid ${config.colors.dim};
 	border-radius: ${config.layout.borderRadius};
 
@@ -62,6 +62,7 @@ export const Testemonials = styled.div`
 		display: block;
 		font-family: ${config.fonts.families.fancy};
 		font-size: ${config.fonts.sizes.small}mm;
+		color: ${config.colors.dark};
 		font-style: italic;
 		font-weight: 400;
 		text-align: justify;
@@ -87,14 +88,19 @@ export const Testemonials = styled.div`
 		line-height: 1;
 
 		& .person {
+			font-size: ${config.fonts.sizes.small}mm;
+			color: ${config.colors.dark};
 			margin-top: 0.25em;
 			&:before{
 				content: "— ";
 			}
 		}
 		& .title {
-			font-size: ${config.fonts.sizes.small}mm;
+			font-size: ${config.fonts.sizes.tiny}mm;
 			font-weight: 400;
+			& b {
+				/* color: ${config.colors.dark}; */
+			}
 		}
 
 		& b {
@@ -110,7 +116,6 @@ export const Abilities = styled.div`
 	grid-template-columns: 1fr auto;
 	align-items: stretch;
 	gap: 1px;
-	/* height: fit-content; */
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.small}mm;
 	line-height: 0.9em;

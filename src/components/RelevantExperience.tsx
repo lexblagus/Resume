@@ -2,7 +2,7 @@ import logo from '../images/logo.svg';
 import { contents } from '../constants/contents';
 import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, H4 } from '../styles/etc.styled';
 import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/structure.styled';
-import { LastExperiences, SpacedRows, Summary } from '../styles/experience.styled';
+import { Experience, SpacedRows, Summary } from '../styles/experience.styled';
 import { contentToKey, getTotalPages, joinElements, monthAbbr } from '../utils/aux';
 
 // =============================================================================
@@ -57,31 +57,31 @@ const RelevantExperience = () => {
 								{experience.attributions.length > 0 && (
 									<div>
 										<H4>Attributions</H4>
-										<LastExperiences className='attributions'>
+										<Experience className='attributions'>
 											{experience.attributions.map((attribution, index) => (
 												<li key={contentToKey(attribution)}>{attribution}{index === experience.attributions.length - 1 ? '.' : ';'}</li>
 											))}
-										</LastExperiences>
+										</Experience>
 									</div>
 								)}
 								{experience.achievements.length > 0 && (
 									<div>
 										<H4>Achievements</H4>
-										<LastExperiences className='achievements'>
+										<Experience className='achievements'>
 											{experience.achievements.map((achievement, index) => (
 												<li key={contentToKey(achievement)}>{achievement}{index === experience.achievements.length - 1 ? '.' : ';'}</li>
 											))}
-										</LastExperiences>
+										</Experience>
 									</div>
 								)}
 								{experience.technologies.length > 0 && (
 									<div>
 										<H4>Technologies</H4>
-										<LastExperiences className='technologies'>
+										<Experience className='technologies'>
 											{experience.technologies.map((technology, index) => (
 												<li key={contentToKey(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
 											))}
-										</LastExperiences>
+										</Experience>
 									</div>
 								)}
 							</SpacedRows>

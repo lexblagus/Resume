@@ -7,7 +7,6 @@ import { TwoCols } from './cover.styled';
 export const Background = styled.div`
 	@media screen {
 		display: flex;
-		/* flex-direction: column; */
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
@@ -20,16 +19,23 @@ export const Background = styled.div`
 // -----------------------------------------------------------------------------
 
 export const Paper = styled.div`
+	max-width: ${config.page.width}mm;
+	min-height: ${config.page.height}mm;
+	padding: ${config.page.margin}mm;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+
 	@media screen {
 		border: solid 1px ${config.page.borderColor};
 		background-color: ${config.colors.background};
 		box-shadow: 0 0 ${config.background.margin / 2}mm hsla(0, 0%, 0%, 0.5);
 		border-radius: ${config.layout.borderRadius};
 	}
-	max-width: ${config.page.width}mm;
-	min-height: ${config.page.height}mm; /* fixed page height */
-	padding: ${config.page.margin}mm;
-	box-sizing: border-box;
+	@media print {
+		height: ${config.page.height}mm; /* fixed page height */
+		overflow: hidden;
+	}
 `;
 
 // -----------------------------------------------------------------------------
@@ -37,22 +43,22 @@ export const Paper = styled.div`
 export const Page = styled.div`
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	height: 100%;
+	flex-grow: 1;
 `;
 
 // -----------------------------------------------------------------------------
 
 export const Top = styled.div`
 	display: grid;
-	grid-template-columns: ${config.logo}mm 1fr;
+	grid-template-columns: ${config.elements.logo}mm 1fr;
 	gap: ${config.layout.spacing.medium}mm;
-	height: ${config.logo}mm;
+	height: ${config.elements.logo}mm;
 `;
 
 // -----------------------------------------------------------------------------
 
 export const Logo = styled.img`
-	width: ${config.logo}mm;
+	width: ${config.elements.logo}mm;
 `;
 
 // -----------------------------------------------------------------------------
@@ -68,7 +74,7 @@ export const Header = styled.div`
 export const Contents = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-left: ${(config.logo + config.layout.spacing.medium)}mm;
+	margin-left: ${(config.elements.logo + config.layout.spacing.medium)}mm;
 	margin-top: ${config.layout.spacing.micro}mm;
 	overflow: hidden;
 
@@ -90,10 +96,9 @@ export const Contents = styled.div`
 // -----------------------------------------------------------------------------
 
 export const Bottom = styled.div`
-	display: none;
-	/* display: flex; */
-	height: ${config.footer.height}mm;
-	margin-top: ${config.layout.spacing.medium}mm;
+	display: flex;
+	/* height: ${config.footer.height}mm; */
+	/* margin-top: ${config.layout.spacing.medium}mm; */
 	justify-content: flex-end;
 	font-size: 0.8em;
 `;

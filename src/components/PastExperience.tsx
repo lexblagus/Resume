@@ -2,8 +2,7 @@ import logo from '../images/logo.svg';
 import { PageNumber, CurrentPage, TotalPages, H2, Light, H3, Dim, Small } from '../styles/etc.styled';
 import { Paper, Page, Top, Logo, Header, Contents, Bottom } from '../styles/structure.styled';
 import { contents } from '../constants/contents';
-import { LastExperiences, SpacedRows, SummaryLabel, TwoCols } from '../styles/experience.styled';
-import { Fragment } from 'react/jsx-runtime';
+import { PastExperiences, Experience, SummaryLabel } from '../styles/experience.styled';
 import { contentToKey, getTotalPages, joinElements, monthAbbr } from '../utils/aux';
 
 // =============================================================================
@@ -29,64 +28,49 @@ const PastExperience = () => {
 				</Top>
 				{/* ------------------------------------------------------------------------ */}
 				<Contents>
-					<TwoCols>
-						{pastIndexes.map(index => {
-							const experience = contents.experience.data[index];
-							return (
-								<Fragment key={contentToKey(experience.company)}>
+					{pastIndexes.map(index => {
+						const experience = contents.experience.data[index];
+						return (
+							<PastExperiences key={contentToKey(experience.company)}>
+								<SummaryLabel>
 									<div>
-										<SummaryLabel>
-											<div>
-												<H3>{experience.company}</H3>
-												{experience.sector}
-											</div>
-											<div><b>{experience.title}</b></div>
-											<div>
-												{monthAbbr(experience.period.start[0])}/{experience.period.start[1]}
-												{' ▹ '}
-												{monthAbbr(experience.period.end[0])}/{experience.period.end[1]}
-												<br />
-												<Dim>({experience.period.amount})</Dim>
-											</div>
-
-										</SummaryLabel>
+										<H3>{experience.company}</H3>
+										{experience.sector}
 									</div>
+									<div><b>{experience.title}</b></div>
 									<div>
-										<SpacedRows className='tiny'>
-											<LastExperiences className='achievements'>
-												{experience.achievements.map((achievement, idx) => (
-													<li key={contentToKey(achievement)}>
-														<Small>
-															{achievement}
-															{idx === experience.achievements.length - 1 ? '.' : ';'}
-														</Small>
-													</li>
-												))}
-											</LastExperiences>
-											<LastExperiences className='technologies'>
-												<li className='single'>
-													<Small>
-														<b>Technologies: </b>
-														{joinElements(experience.technologies)}
-													</Small>
-												</li>
-											</LastExperiences>
-											{experience.clients.length > 0 && (
-												<LastExperiences className='clients'>
-													<li className='single'>
-														<Small>
-															<b>Clients: </b>
-															{joinElements(experience.clients)}
-														</Small>
-													</li>
-												</LastExperiences>
-											)}
-										</SpacedRows>
+										{monthAbbr(experience.period.start[0])}/{experience.period.start[1]}
+										{' ▹ '}
+										{monthAbbr(experience.period.end[0])}/{experience.period.end[1]}
+										<br />
+										<Dim>({experience.period.amount})</Dim>
 									</div>
-								</Fragment>
-							);
-						})}
-					</TwoCols>
+								</SummaryLabel>
+								<Experience className='achievements'>
+									{experience.achievements.map((achievement, idx) => (
+										<li key={contentToKey(achievement)}>
+											{achievement}
+											{idx === experience.achievements.length - 1 ? '.' : ';'}
+										</li>
+									))}
+								</Experience>
+								<Experience className='technologies'>
+									<li className='single'>
+										<b>Technologies: </b>
+										{joinElements(experience.technologies)}
+									</li>
+								</Experience>
+								{experience.clients.length > 0 && (
+									<Experience className='clients'>
+										<li className='single'>
+											<b>Clients: </b>
+											{joinElements(experience.clients)}
+										</li>
+									</Experience>
+								)}
+							</PastExperiences>
+						);
+					})}
 				</Contents>
 				{/* ------------------------------------------------------------------------ */}
 				<Bottom>

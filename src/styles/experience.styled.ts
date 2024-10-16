@@ -40,12 +40,21 @@ export const SpacedRows = styled.div`
 
 // -----------------------------------------------------------------------------
 
-export const LastExperiences = styled.ol`
+export const PastExperiences = styled.div`
+	clear: both;
+	margin-bottom: ${config.layout.spacing.medium}mm;
+`;
+
+// -----------------------------------------------------------------------------
+
+export const Experience = styled.ol`
 	margin: 0;
 	padding-left: 0;
 	list-style-type: none;
+	display: grid;
 	font-family: ${config.fonts.families.secondary};
-	font-size: ${config.fonts.sizes.default}mm;
+	font-size: ${config.fonts.sizes.small}mm;
+	/* background-color: yellow; */
 
 	& > li {
 		&:before {
@@ -66,7 +75,8 @@ export const LastExperiences = styled.ol`
 	}
 	&.achievements  > li:before {
 		content: '▲';
-		font-size: 0.6em;
+		font-size: 0.65em;
+		vertical-align: middle;
 	}
 	&.technologies  > li:before {
 		content: '■';
@@ -88,10 +98,17 @@ export const TwoCols = styled.div`
 // -----------------------------------------------------------------------------
 
 export const SummaryLabel = styled.div`
+	/*
 	display: flex;
 	flex-direction: column;
 	gap: ${config.layout.spacing.tiny}mm;
 	width: auto;
+	*/
+	width: ${config.elements.smallBox}mm;
+	min-height: ${config.elements.smallBox}mm;
+	float: left;
+	margin-right: ${config.layout.spacing.tiny}mm;
+	box-sizing: border-box;
 
 	background-color: ${config.colors.light};
 	border: 1px solid ${config.colors.dim};

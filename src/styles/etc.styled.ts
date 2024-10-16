@@ -121,6 +121,7 @@ export const PageNumber = styled.div`
 		color: ${config.colors.accent};
 		border: 1px solid ${config.colors.accent};
 	} */
+	height: ${config.footer.height}mm;
 	min-width: ${config.footer.height}mm;
 	background-color: ${config.colors.accent};
 	color: ${config.colors.background};
@@ -129,6 +130,7 @@ export const PageNumber = styled.div`
 	align-items: center;
 	overflow: hidden;
 	padding: 0 2.5mm;
+	margin-top: ${config.layout.spacing.tiny}mm;
 	box-sizing: border-box;
 	font-family: ${config.fonts.families.secondary};
 `;
