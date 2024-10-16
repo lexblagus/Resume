@@ -37,7 +37,7 @@ echo "Build"
 echo '--------------------------------------------------------------------------------'
 
 npm run build
-REMOTE_PATH=/home/www/z512.x128.com.br
+REMOTE_PATH=/home/www/resume.blag.us
 mkdir deploy
 ARCHIVE="dist-$VERSION.zip"
 zip -r ./deploy/$ARCHIVE ./dist
@@ -60,7 +60,7 @@ else
 
   sshpass -f secret/pass scp -P $(cat secret/port) ./deploy/$ARCHIVE $(cat secret/host):$REMOTE_PATH
   rm -rf ./deploy
-  sshpass -f secret/pass ssh $(cat secret/host) -p $(cat secret/port) "cd $REMOTE_PATH && rm -rf ./dist && unzip ./$ARCHIVE && rm ./$ARCHIVE"
+  sshpass -f secret/pass ssh $(cat secret/user)@$(cat secret/host) -p $(cat secret/port) "cd $REMOTE_PATH && rm -rf ./dist && unzip ./$ARCHIVE && rm ./$ARCHIVE"
 
 
   echo ''
