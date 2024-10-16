@@ -41,6 +41,7 @@ export const contents = {
 		<>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
 		<><a href="mailto:lex@blag.us"><Unwrapable><b>lex@</b>blag.us</Unwrapable></a></>,
 		<><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
+		<><a href="https://resume.blag.us/AlexanderBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a></>,
 		<><br /></>,
 		<><b>{calculateAge('1978-11-12')}</b> years old</>,
 		<><b>{calculateAge('1999-04-12')}</b> years of work experience</>,
