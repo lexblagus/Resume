@@ -21,7 +21,7 @@ export default {
 			'Titillium Web'
 			'Rajdhani'
 			*/
-			body: "serif",
+			body: "IBM Plex Sans, serif",
 			secondary: "'Rajdhani', sans-serif",
 			fancy: "'Bodoni Moda', serif",
 		},

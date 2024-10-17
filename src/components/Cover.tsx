@@ -49,9 +49,12 @@ const Cover = () => {
 					<TwoCols>
 						<TwoSpacedRows>
 							<About>
-								{contents.about.map(content => (
+								{contents.about.map((content, index) => (
 									<li
 										key={contentToKey(content)}
+										style={{
+											marginBottom: index === 3 ? '1em' : '0',
+										}}
 									>
 										{content}
 									</li>

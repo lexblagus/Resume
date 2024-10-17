@@ -1,13 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Binding from './components/Binding'
+import Routes from './routes'
 import GlobalStyle from './styles/global.styled';
+import { BrowserRouter } from 'react-router-dom';
 
 // =============================================================================
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <GlobalStyle />
-    <Binding />
+	<BrowserRouter>
+		<GlobalStyle />
+		<Routes />
+	</BrowserRouter>
   </StrictMode>,
 )
