@@ -28,7 +28,7 @@ const Plain = () => {
 							</li>
 						))}
 					</p>
-					<h3>Technologies</h3>
+					<h3>Technologies<br /></h3>
 					<IndexedList>
 						{contents.abilities.map(ability => (
 							<li key={contentToKey(ability)}>
@@ -48,10 +48,10 @@ const Plain = () => {
 			</Paper>
 			<Paper>
 				<Page>
-					<h3>Experience</h3>
+					<h3>Experience<br /></h3>
 					{contents.experience.data.map(experience => (
 						<Fragment key={contentToKey(experience.company)}>
-							<h4 className='spaced'>{experience.company}</h4>
+							<h4 className='spaced'>{experience.company}<br /></h4>
 							<ul>
 								<li>
 									<b>Period:</b>
@@ -74,20 +74,20 @@ const Plain = () => {
 								)}
 							</ul>
 							{experience.attributions && experience.attributions.length > 0 && (<>
-								<h5>Attributions</h5>
+								<h5>Attributions<br /></h5>
 								<ul>
 									{experience.attributions.map((attribution, index) => (
 										<li key={contentToKey(attribution)}>{attribution}{index === experience.attributions.length - 1 ? '.' : ';'}</li>
 									))}
 								</ul>
 							</>)}
-							<h5>Achievements</h5>
+							<h5>Achievements<br /></h5>
 							<ul>
 								{experience.achievements.map((achievement, index) => (
 									<li key={contentToKey(achievement)}>{achievement}{index === experience.achievements.length - 1 ? '.' : ';'}</li>
 								))}
 							</ul>
-							<h5>Technologies</h5>
+							<h5>Technologies<br /></h5>
 							<ul>
 								{experience.technologies.map((technology, index) => (
 									<li key={contentToKey(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
