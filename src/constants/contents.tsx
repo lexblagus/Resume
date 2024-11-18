@@ -255,8 +255,8 @@ export const contents = {
 			{
 				company: 'Nicsware',
 				period: {
-					start: [7, 2003],
-					end: [7, 2004],
+					start: [7, 2013],
+					end: [7, 2014],
 				},
 				title: 'Software architect',
 				sector: 'Healthcare software startup',
