@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 	${fonts}
 
 	html, body, #root {
-		display: inline-block;
+		/* display: inline-block; *//*  disabled so page break can work  */
 		min-width: 100%;
 	}
 
@@ -21,6 +21,13 @@ const GlobalStyle = createGlobalStyle`
 	@media screen {
 		body {
 			background-color: ${config.background.color};
+		}
+	}
+
+	@media print {
+		@page {
+			size: A4 portrait;
+			margin: 0;
 		}
 	}
 
@@ -41,9 +48,6 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration:underline;
 	}
 
-	@page {
-		size: A4 portrait;
-	}
 `;
 
 export default GlobalStyle;

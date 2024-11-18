@@ -35,6 +35,7 @@ export const Paper = styled.div`
 	@media print {
 		height: ${config.page.height}mm; /* fixed page height */
 		overflow: hidden;
+		page-break-after: always;
 	}
 `;
 

@@ -1,5 +1,5 @@
 import { contents } from "../constants/contents"
-import { Background, IndexedList, Page, Paper } from "../styles/plain.styled"
+import { Background, Experience, IndexedList, Page, Paper } from "../styles/plain.styled"
 import { contentToKey, joinElements, monthAbbr, yearsFromNow } from "../utils/aux"
 import { Dim } from "../styles/etc.styled"
 import { Fragment } from "react/jsx-runtime"
@@ -63,7 +63,7 @@ const Plain = () => {
 				<Page>
 					<h3>Experience<br /></h3>
 					{contents.experience.data.map(experience => (
-						<Fragment key={contentToKey(experience.company)}>
+						<Experience key={contentToKey(experience.company)}>
 							<h4 className='spaced'>{experience.company}<br /></h4>
 							<ul>
 								<li>
@@ -107,7 +107,7 @@ const Plain = () => {
 								))}
 							</ul>
 
-						</Fragment>
+						</Experience>
 					))}
 				</Page>
 			</Paper>

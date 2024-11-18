@@ -27,10 +27,14 @@ export const Paper = styled.div`
 		border-radius: ${config.layout.borderRadius};
 	}
 	@media print {
+		/* page-break-before: always; */
+		page-break-after: always;
 	}
 `;
 
 export const Page = styled.div`
+	@media print {
+	}
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0;
 	}
@@ -73,7 +77,7 @@ export const Page = styled.div`
 		&.spaced {
 			margin-top: 2em;
 			&:first-of-type {
-				margin-top: 0;
+				/* margin-top: 0; */
 			}
 		}
 	}
@@ -88,6 +92,12 @@ export const Page = styled.div`
 		font-weight: 600;
 		color: hsl(0, 0%, 50%);
 		text-transform: uppercase;
+	}
+`;
+
+export const Experience = styled.div`
+	@media print {
+		page-break-after: always;
 	}
 `;
 
@@ -114,35 +124,3 @@ export const IndexedList = styled.ul`
 	}
 
 `;
-
-
-
-/*
-@media print {
-
-//   A4 page size
-  @page :nth(1) {
-    size: A4;
-    margin: 1in;
-  }
-
-  .page-1 {
-    page: :nth(1);
-  }
-
-//   A5 page size
-  @page :nth(2) {
-    size: A5;
-    margin: 0.5in;
-  }
-
-  .page-2 {
-    page: :nth(2);
-  }
-
-//   Hide non-printable elements
-  body, .background {
-    display: block;
-  }
-}
-*/
