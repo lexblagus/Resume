@@ -4,23 +4,30 @@ import config from './config';
 // =============================================================================
 
 export const Background = styled.div`
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: center;
-	gap: ${config.background.margin}mm;
-	padding: ${config.background.margin}mm;
-	font-family: ${config.fonts.families.body};
+	@media screen {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+		gap: ${config.background.margin}mm;
+		padding: ${config.background.margin}mm;
+		font-family: ${config.fonts.families.body};
+	}
 `;
 
 export const Paper = styled.div`
 	padding: ${config.page.margin}mm;
-	border: solid 1px ${config.page.borderColor};
-	background-color: ${config.colors.background};
-	box-shadow: 0 0 ${config.background.margin / 2}mm hsla(0, 0%, 0%, 0.5);
-	border-radius: ${config.layout.borderRadius};
 	flex-grow: 1;
+
+	@media screen {
+		border: solid 1px ${config.page.borderColor};
+		background-color: ${config.colors.background};
+		box-shadow: 0 0 ${config.background.margin / 2}mm hsla(0, 0%, 0%, 0.5);
+		border-radius: ${config.layout.borderRadius};
+	}
+	@media print {
+	}
 `;
 
 export const Page = styled.div`
@@ -107,3 +114,35 @@ export const IndexedList = styled.ul`
 	}
 
 `;
+
+
+
+/*
+@media print {
+
+//   A4 page size
+  @page :nth(1) {
+    size: A4;
+    margin: 1in;
+  }
+
+  .page-1 {
+    page: :nth(1);
+  }
+
+//   A5 page size
+  @page :nth(2) {
+    size: A5;
+    margin: 0.5in;
+  }
+
+  .page-2 {
+    page: :nth(2);
+  }
+
+//   Hide non-printable elements
+  body, .background {
+    display: block;
+  }
+}
+*/

@@ -13,12 +13,6 @@ const Plain = () => {
 				<Page>
 					<h1>Professional resume: <b>Alexander Blagus</b></h1>
 					<h2>senior web developer: <Dim>front end &amp; backend (fullstack)</Dim></h2>
-					{/*
-					<h3>Basic information</h3>
-					<h4>Experience company</h4>
-					<h5>Heading Five</h5>
-					<h6>Heading Six</h6>
-					*/}
 					<p>
 						{contents.about.map(content => (
 							<li
@@ -28,23 +22,42 @@ const Plain = () => {
 							</li>
 						))}
 					</p>
+				</Page>
+			</Paper>
+			<Paper>
+				<Page>
+					<h3>Cover letter<br /></h3>
+					<p><i>Hi!</i></p>
+					<p>I am 45 years old and I am located in São Paulo - Brazil.</p>
+					<p>I have more than 20 years of experience developing web applications (frontend and backend) for several different companies, both large enterprises as well as medium and small sized companies like web agencies, startups, consulting firms and others.</p>
+					<p>I designed, coded, deployed and maintained web software for any kind of application you can imagine: production line control with large monitoring dashboards, financial services payment gateways and checkout, complex personal medical records editor, call center management data, countless CMS systems and websites and many other solutions.</p>
+					<p>I’m passionate about creating impactful, efficient, and user-friendly software solutions. From the paper sketches with clients, coding the frontend and backend software, integrating the systems around it, modeling data in the database, configuring and maintaining the server infrastructure, I bring a strong technical foundation, an eye for design, and a hands-on approach to problem-solving in every project I undertake.</p>
+					<p>I'm excited to bring my skills to a team where I can contribute meaningfully and continue learning.</p>
+					<p><i>
+						Thank you for considering me for your team!<br />
+						I look forward to the opportunity to work together!
+					</i></p>
+				</Page>
+			</Paper>
+			<Paper>
+				<Page>
 					<h3>Technologies<br /></h3>
 					<IndexedList>
 						{contents.abilities.map(ability => (
 							<li key={contentToKey(ability)}>
-									<div>{ability.name}:</div>
-									<div>&nbsp;</div>
-									<div>
-										<b><i>
-											{yearsFromNow(ability.year)}
-											{' '}
-											{yearsFromNow(ability.year) === 1 ? 'year' : 'years'}
-										</i></b>
-									</div>
+								<div>{ability.name}:</div>
+								<div>&nbsp;</div>
+								<div>
+									<b><i>
+										{yearsFromNow(ability.year)}
+										{' '}
+										{yearsFromNow(ability.year) === 1 ? 'year' : 'years'}
+									</i></b>
+								</div>
 							</li>
 						))}
 					</IndexedList>
-					</Page>
+				</Page>
 			</Paper>
 			<Paper>
 				<Page>
@@ -93,7 +106,7 @@ const Plain = () => {
 									<li key={contentToKey(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
 								))}
 							</ul>
-							
+
 						</Fragment>
 					))}
 				</Page>
