@@ -27,7 +27,6 @@ export const Paper = styled.div`
 		border-radius: ${config.layout.borderRadius};
 	}
 	@media print {
-		/* page-break-before: always; */
 		page-break-after: always;
 	}
 `;

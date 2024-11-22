@@ -8,6 +8,7 @@ import config from './config';
 const GlobalStyle = createGlobalStyle`
 	${fonts}
 
+
 	html, body, #root {
 		/* display: inline-block; *//*  disabled so page break can work  */
 		min-width: 100%;
@@ -28,6 +29,10 @@ const GlobalStyle = createGlobalStyle`
 		@page {
 			size: A4 portrait;
 			margin: 0;
+		}
+		* {
+			print-color-adjust: exact;
+			-webkit-print-color-adjust: exact;
 		}
 	}
 
