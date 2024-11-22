@@ -36,6 +36,14 @@ Within cells interlinked.`;
 
 // -----------------------------------------------------------------------------
 
+// Used in Plain
+export const bulletAttributions = '●'; // ● ⏺ ·
+export const bulletAchievements = '⏶'; // ▲ ⏶ ▴
+export const bulletTechnologies = '▪'; // ▪ ■ ⏹ ◼ ◾ ⬛
+export const bulletClients = '◆';
+
+// -----------------------------------------------------------------------------
+
 export const contents = {
 	about: [
 		<>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,

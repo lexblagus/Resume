@@ -1,4 +1,4 @@
-import { contents } from "../constants/contents"
+import { bulletAchievements, bulletAttributions, bulletTechnologies, contents } from "../constants/contents"
 import { Background, Experience, IndexedList, Page, Paper } from "../styles/plain.styled"
 import { contentToKey, joinElements, monthAbbr, yearsFromNow } from "../utils/aux"
 import { Dim } from "../styles/etc.styled"
@@ -25,7 +25,7 @@ const Plain = () => {
 			</Paper>
 			<Paper>
 				<Page>
-					<h3>Cover letter<br /></h3>
+					<h3>Cover letter</h3>
 					<p><i>Hi!</i></p>
 					<p>I am 45 years old and I am located in São Paulo - Brazil.</p>
 					<p>I have more than 20 years of experience developing web applications (frontend and backend) for several different companies, both large enterprises as well as medium and small sized companies like web agencies, startups, consulting firms and others.</p>
@@ -40,7 +40,7 @@ const Plain = () => {
 			</Paper>
 			<Paper>
 				<Page>
-					<h3>Technologies<br /></h3>
+					<h3>Technologies</h3>
 					<IndexedList>
 						{contents.abilities.map(ability => (
 							<li key={contentToKey(ability)}>
@@ -60,10 +60,11 @@ const Plain = () => {
 			</Paper>
 			<Paper>
 				<Page>
-					<h3>Experience<br /></h3>
+					<h3>Experience</h3>
 					{contents.experience.data.map(experience => (
 						<Experience key={contentToKey(experience.company)}>
-							<h4 className='spaced'>{experience.company}<br /></h4>
+							<br />
+							<h4 className='spaced'>{experience.company}</h4>
 							<ul>
 								<li>
 									<b>Period:</b>
@@ -86,23 +87,34 @@ const Plain = () => {
 								)}
 							</ul>
 							{experience.attributions && experience.attributions.length > 0 && (<>
-								<h5>Attributions<br /></h5>
+								<br />
+								<h5>Attributions</h5>
 								<ul>
 									{experience.attributions.map((attribution, index) => (
-										<li key={contentToKey(attribution)}>{attribution}{index === experience.attributions.length - 1 ? '.' : ';'}</li>
+										<li key={contentToKey(attribution)}>
+											{bulletAttributions} {attribution}{index === experience.attributions.length - 1 ? '.' : ';'}
+										</li>
 									))}
 								</ul>
 							</>)}
-							<h5>Achievements<br /></h5>
+							
+							<br />
+							<h5>Achievements</h5>
 							<ul>
 								{experience.achievements.map((achievement, index) => (
-									<li key={contentToKey(achievement)}>{achievement}{index === experience.achievements.length - 1 ? '.' : ';'}</li>
+									<li key={contentToKey(achievement)}>
+										{bulletAchievements} {achievement}{index === experience.achievements.length - 1 ? '.' : ';'}
+									</li>
 								))}
 							</ul>
-							<h5>Technologies<br /></h5>
+							
+							<br />
+							<h5>Technologies</h5>
 							<ul>
 								{experience.technologies.map((technology, index) => (
-									<li key={contentToKey(technology)}>{technology}{index === experience.technologies.length - 1 ? '.' : ';'}</li>
+									<li key={contentToKey(technology)}>
+										{bulletTechnologies} {technology}{index === experience.technologies.length - 1 ? '.' : ';'}
+									</li>
 								))}
 							</ul>
 

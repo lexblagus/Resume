@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import config from './config';
 import { H3 } from './etc.styled';
+import { bulletAchievements, bulletAttributions, bulletClients, bulletTechnologies } from '../constants/contents';
 
 // =============================================================================
 
@@ -69,18 +70,19 @@ export const Experience = styled.ol`
 	}
 	
 	&.attributions  > li:before {
-		content: '●';
+		/* content: '●'; */
+		content: '${bulletAttributions}';
 	}
 	&.achievements  > li:before {
-		content: '▲';
-		font-size: 0.65em;
-		vertical-align: middle;
+		content: '${bulletAchievements}';
+		/* font-size: 0.65em; */
+		/* vertical-align: middle; */
 	}
 	&.technologies  > li:before {
-		content: '■';
+		content: '${bulletTechnologies}';
 	}
 	&.clients  > li:before {
-		content: '◆';
+		content: '${bulletClients}';
 	}
 `;
 

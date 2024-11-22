@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import config from './config';
+import { bulletAttributions } from '../constants/contents';
 
 // =============================================================================
 
@@ -42,8 +43,9 @@ export const Page = styled.div`
 		padding: 0;
 	}
 	li {
-		/* list-style-type: none; */
+		list-style-type: none;
 		list-style-position:inside;
+		content: '${bulletAttributions}';
 
 	}
 	h1 {
