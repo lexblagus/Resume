@@ -61,6 +61,7 @@ export const Experience = styled.ol`
 			margin: 0 0.25em 0 0;
 			padding: 0;
 			color: ${config.colors.dim};
+			line-height: 0;
 		}
 	}
 	& > li.single {
@@ -80,6 +81,7 @@ export const Experience = styled.ol`
 	}
 	&.technologies  > li:before {
 		content: '${bulletTechnologies}';
+		font-size: 1.4em;
 	}
 	&.clients  > li:before {
 		content: '${bulletClients}';
