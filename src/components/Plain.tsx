@@ -2,7 +2,6 @@ import { contents } from "../constants/contents"
 import { Background, Experience, IndexedList, Page, Paper } from "../styles/plain.styled"
 import { contentToKey, joinElements, monthAbbr, yearsFromNow } from "../utils/aux"
 import { Dim } from "../styles/etc.styled"
-import { Fragment } from "react/jsx-runtime"
 
 // =============================================================================
 
