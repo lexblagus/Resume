@@ -1,4 +1,4 @@
-import { Abbr, Unwrapable } from "../styles/etc.styled";
+import { Abbr, PrintOnly, ScreenOnly, Unwrapable } from "../styles/etc.styled";
 import { amountOfTime, calculateAge } from "../utils/aux";
 
 // =============================================================================
@@ -49,7 +49,14 @@ export const contents = {
 		<>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
 		<><a href="mailto:lex@blag.us"><Unwrapable><b>lex@</b>blag.us</Unwrapable></a></>,
 		<><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
-		<><a href="https://resume.blag.us/AlexanderBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a></>,
+		<>
+			<ScreenOnly>
+				<a href="https://resume.blag.us/AlexanderBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a>
+			</ScreenOnly>
+			<PrintOnly>
+				<a href="https://resume.blag.us/"><Unwrapable><b><Abbr>Web</Abbr></b> version</Unwrapable></a>
+			</PrintOnly>
+		</>,
 		<><b>{calculateAge('1978-11-12')}</b> years old</>,
 		<><b>{calculateAge('1999-04-12')}</b> years of work experience</>,
 		<>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></>,

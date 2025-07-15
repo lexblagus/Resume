@@ -144,3 +144,23 @@ export const CurrentPage = styled.div`
 export const TotalPages = styled.span`
 	font-size: ${config.fonts.sizes.small}mm;
 `;
+
+// -----------------------------------------------------------------------------
+
+export const ScreenOnly = styled.div`
+	@media screen {
+		display: initial;
+	}
+	@media print {
+		display: none;
+	}
+`;
+
+export const PrintOnly = styled.div`
+	@media screen {
+		display: none;
+	}
+	@media print {
+		display: initial;
+	}
+`;
