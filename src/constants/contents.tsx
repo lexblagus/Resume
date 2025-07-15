@@ -51,7 +51,7 @@ export const contents = {
 		<><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
 		<>
 			<ScreenOnly>
-				<a href="https://resume.blag.us/AlexanderBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a>
+				<a href="https://resume.blag.us/LexaBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a>
 			</ScreenOnly>
 			<PrintOnly>
 				<a href="https://resume.blag.us/"><Unwrapable><b><Abbr>Web</Abbr></b> version</Unwrapable></a>
