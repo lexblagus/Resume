@@ -27,7 +27,7 @@ const PastExperience = () => {
 					</Header>
 				</Top>
 				{/* ------------------------------------------------------------------------ */}
-				<Contents>
+				<Contents className='topSpaced'>
 					{pastIndexes.map(index => {
 						const experience = contents.experience.data[index];
 						return (

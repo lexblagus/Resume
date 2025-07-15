@@ -112,17 +112,17 @@ export const contents = {
 		distribution: {
 			pre: 1, // cover and technologies
 			relevant: 
-				// [0,1,2,3,4,5,6,7,8,9],
-				[0, 1],
+				[],
 			past: [
-				// [0,1,2,3,4,5,6,7,8,9],
-				[2, 3, 4, ],
-				[5, 6, 7, 8, ],
-				[9, 10, ]
+				[0, 1, 2, ],
+				[3, 4, 5,],
+				[6, 7, 8, 9, ],
+				[10, 11],
 			],
 		},
 		data: [
-			/* {
+			/*
+			{
 				company: '',
 				period: {
 					start: [0, 0],
@@ -135,7 +135,28 @@ export const contents = {
 				attributions: [],
 				achievements: [],
 				technologies: [],
-			}, */
+			},
+			*/
+			{
+				company: 'Ambush',
+				period: {
+					start: [12, 2024],
+					end: [5, 2025],
+				},
+				title: 'Fullstack Senior Web Developer',
+				sector: 'Software design and consulting',
+				about: 'Ambush integrates top-tier remote engineers and designers into U.S. tech product teams, delivering human-centered partnerships built for quality, compliance, and enterprise scale.',
+				clients: [<>PayPal</>],
+				attributions: [],
+				achievements: [
+					<>Create and change email templates for massive transactional operations</>,
+					<>Make HTML compatible with all rendering engines for a very broad spectrum of email clients</>,
+				],
+				technologies: [
+					<>React</>,
+					<>JSX</>,
+				],
+			},
 			{
 				company: 'Applied Blockchain',
 				period: {

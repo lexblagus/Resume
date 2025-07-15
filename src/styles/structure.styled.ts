@@ -9,7 +9,7 @@ export const Background = styled.div`
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 		gap: ${config.background.margin}mm;
 		padding: ${config.background.margin}mm;
@@ -83,7 +83,7 @@ export const Contents = styled.div`
 	}
 
 	&.topSpaced {
-		margin-top: ${config.layout.spacing.small}mm;
+		margin-top: ${config.layout.spacing.medium}mm;
 	}
 
 	${TwoCols} {
