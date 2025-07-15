@@ -67,7 +67,7 @@ export const contents = {
 	],
 	testemonials: [
 		{
-			cite: <>He has been determined during the whole process, giving creative solutions for the challenges of the work</>,
+			cite: <>She has been determined during the whole process, giving creative solutions for the challenges of the work</>,
 			person: <>Alexandre Nakasato</>,
 			title: <>founder of <b>Nicsware</b></>,
 		},

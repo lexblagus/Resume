@@ -7,10 +7,11 @@ export const TagLine = styled.div`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.medium}mm;
 	font-weight: 700;
+	text-shadow: ${[...Array(3)].map((_, i) => `0 0 ${i + 1}px hsla(0, 0%, 100%, 1)`).join(',')};
 `;
 
 export const TagLineSpaced = styled(TagLine)`
-	margin-top: 1.2em;
+	margin-top: 3.5mm;
 	margin-bottom: ${config.layout.spacing.medium}mm;
 	line-height: 0.75em;
 `;
@@ -55,14 +56,13 @@ export const H1 = styled.h1`
 	font-size: ${config.fonts.sizes.huge}mm;
 	font-style: italic;
 	font-weight: 800;
-	letter-spacing: -1mm;
-	word-spacing: -0.2em;
 	line-height: 0.8;
 	margin: 0;
+	word-spacing: -9mm;
 
 	${Light} {
 		font-weight: 400;
-		letter-spacing: -2mm;
+		color: ${config.colors.dark};
 	}
 `;
 

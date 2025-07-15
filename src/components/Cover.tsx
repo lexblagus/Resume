@@ -1,10 +1,10 @@
 import { Fragment } from 'react/jsx-runtime';
 import logo from '../images/logo.svg';
-import { contentToKey, getTotalPages, yearsFromNow } from '../utils/aux';
+import { contentToKey, splitLetterSpacing, getTotalPages, yearsFromNow } from '../utils/aux';
 import { contents } from '../constants/contents';
 import { Bottom, Contents, Header, Logo, Page, Paper, Top } from '../styles/structure.styled';
 import { TwoCols, TwoSpacedRows, About, Testemonials, Abilities } from '../styles/cover.styled';
-import { TagLine, Light, H1, TagLineSpaced, Mild, Unwrapable, PageNumber, CurrentPage, TotalPages, Small } from '../styles/etc.styled';
+import { TagLine, Light, H1, TagLineSpaced, Unwrapable, PageNumber, CurrentPage, TotalPages, Small } from '../styles/etc.styled';
 
 // =============================================================================
 
@@ -28,7 +28,25 @@ const Cover = () => {
 				</Top>
 				{/* ------------------------------------------------------------------------ */}
 				<Contents>
-					<H1><Light>alexander</Light> blagus</H1>
+					<H1>
+						<Light>
+							{splitLetterSpacing('lexa', [
+								'-3mm',
+								'-2mm',
+								'-2.5mm',
+								'-2.5mm',
+							])}
+						</Light>
+						{' '}
+						{splitLetterSpacing('blagus', [
+							'-2mm',
+							'-1.5mm',
+							'-3.5mm',
+							'-1mm',
+							'-1.75mm',
+							'0',
+						])}
+					</H1>
 					<TagLineSpaced>
 						<Unwrapable>
 							//{' '}
@@ -40,7 +58,7 @@ const Cover = () => {
 							<Small>
 								<Light>
 									frontend &amp; backend{' '}
-									<Mild>(fullstack)</Mild>
+									{/* <Mild>(fullstack)</Mild> */}
 								</Light>
 							</Small>
 						</Unwrapable>

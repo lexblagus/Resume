@@ -1,6 +1,7 @@
 import { Fragment } from 'react/jsx-runtime';
 import ReactDOMServer from "react-dom/server";
 import { Contents } from "../constants/contents";
+import type { Property } from "csstype";
 
 // =============================================================================
 
@@ -99,7 +100,7 @@ export const monthAbbr = (month: number): string => {
 		}
 	}
 	return '';
-}
+};
 
 // -----------------------------------------------------------------------------
 
@@ -115,15 +116,17 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const contentToKey = (content: object | Array<string | number> | string | JSX.Element) => hashString(ReactDOMServer.renderToString(JSON.stringify(content)))
+export const contentToKey = (content: object | Array<string | number> | string | JSX.Element) =>
+	hashString(ReactDOMServer.renderToString(JSON.stringify(content)));
 
 // -----------------------------------------------------------------------------
 
-export const getTotalPages = (contents: Contents) => contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
+export const getTotalPages = (contents: Contents) =>
+	contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
 
 // -----------------------------------------------------------------------------
 
-export const joinElements = (contents: (string | JSX.Element)[]): JSX.Element => (<Fragment>{
+export const joinElements = (contents: (string | JSX.Element)[]): JSX.Element => (<>{
 	contents.map((item, index) => (
 		<Fragment key={contentToKey(item)}>
 			{item}
@@ -134,4 +137,14 @@ export const joinElements = (contents: (string | JSX.Element)[]): JSX.Element =>
 			)}
 		</Fragment>
 	))
-}</Fragment>)
+}</>);
+
+// -----------------------------------------------------------------------------
+
+export const splitLetterSpacing = (text: string, spacings: Property.LetterSpacing[]): JSX.Element => (<>{
+	text.split('').map(
+		(letter, index) => (
+			<span style={{letterSpacing: spacings[index]}}>{letter}</span>
+		)
+	)
+}</>);

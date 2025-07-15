@@ -31,7 +31,7 @@ export default {
 			default: 4.5, // mm
 			medium: 6, // mm
 			large: 10, // mm
-			huge: 21, // mm
+			huge: 35.5, // mm
 		},
 	},
 	background: {
