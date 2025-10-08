@@ -15,7 +15,7 @@ const PastExperience = () => {
 				<Top>
 					<Logo
 						src={logo}
-						alt="Logo comopsed of an lowercase letter b within a black square"
+						alt="Logo composed of an lowercase letter b within a black square"
 					/>
 					<Header>
 						{i === 0 && (

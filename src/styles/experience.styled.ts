@@ -25,6 +25,12 @@ export const Summary = styled.ol`
 	& b {
 		font-weight: 700;
 	}
+
+	${H3} {
+		font-size: ${config.fonts.sizes.large}mm;
+		font-weight: 600;
+		margin-bottom: ${config.layout.spacing.tiny}mm;
+	}
 `;
 
 // -----------------------------------------------------------------------------

@@ -88,10 +88,15 @@ export const H3 = styled.h3`
 	font-style: italic;
 	font-weight: 800;
 	font-size: ${config.fonts.sizes.large}mm;
+	line-height: 1;
 	letter-spacing: -0.4mm;
 	word-spacing: 0.1em;
 	color: ${config.colors.foreground};
 	margin: 0;
+
+	&:not(:first-child) {
+		margin-top: ${config.layout.spacing.medium}mm;
+	}
 
 	& > .slashes{
 		font-family: ${config.fonts.families.secondary};

@@ -118,8 +118,18 @@ export const contents = {
 	experience: {
 		distribution: {
 			pre: 1, // cover and technologies
-			relevant: 
-				[],
+			relevant: [
+				/* [0, ],
+				[1, ],
+				[2, ],
+				[3, ],
+				[4, ],
+				[5, ],
+				[6, ],
+				[7, 8, ],
+				[9, 10, ],
+				[11], */
+			],
 			past: [
 				[0, 1, 2, ],
 				[3, 4, 5,],

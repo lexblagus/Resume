@@ -102,12 +102,14 @@ const Cover = () => {
 				</Contents>
 				{/* ------------------------------------------------------------------------ */}
 				{<Bottom>
-					<PageNumber>
-						<CurrentPage>
-							1
-							<TotalPages>/{getTotalPages(contents)}</TotalPages>
-						</CurrentPage>
-					</PageNumber>
+					{getTotalPages(contents) > 1 && (
+						<PageNumber>
+							<CurrentPage>
+								1
+								<TotalPages>/{getTotalPages(contents)}</TotalPages>
+							</CurrentPage>
+						</PageNumber>
+					)}
 				</Bottom>}
 				{/* ------------------------------------------------------------------------ */}
 			</Page>
