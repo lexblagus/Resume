@@ -11,9 +11,9 @@ export const TagLine = styled.div`
 `;
 
 export const TagLineSpaced = styled(TagLine)`
-	margin-top: 3.5mm;
+	margin-top: 1.5mm;
 	margin-bottom: ${config.layout.spacing.medium}mm;
-	line-height: 0.75em;
+	line-height: 0.8em;
 `;
 
 // -----------------------------------------------------------------------------
@@ -25,7 +25,7 @@ export const Light = styled.span`
 
 export const Mild = styled.span`
 	color: ${config.colors.foreground};
-	font-weight: 300;
+	font-weight: 400;
 `;
 
 export const Unwrapable = styled.span`

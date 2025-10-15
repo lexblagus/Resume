@@ -3,7 +3,7 @@ export default {
 		foreground: 'black',
 		background: 'white',
 		accent: 'black',
-		dim: 'hsla(0, 0%, 50%, 1)',
+		dim: 'hsla(0, 0%, 40%, 1)',
 		quote: 'hsla(0, 0%, 75%, 1)',
 		light: 'hsla(0, 0%, 90%, 1)',
 		dark: 'hsla(0, 0%, 30%, 1)',
@@ -50,7 +50,8 @@ export default {
 			micro: 1, // mm
 			tiny : 2.5, // mm
 			small : 5, // mm
-			medium : 10, // mm	
+			medium : 10, // mm
+			large : 20, // mm
 		},
 		breakpoints: {
 			xs : '600px',

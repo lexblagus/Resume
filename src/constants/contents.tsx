@@ -52,6 +52,9 @@ export const contents = {
 			</a>
 		</>,
 		<>
+			<Tiny>
+				<Dim>also in</Dim>
+			</Tiny>{" "}
 			<ScreenOnly>
 				<a href="https://resume.blag.us/LexaBlagus.pdf">
 					<Unwrapable>
@@ -75,7 +78,7 @@ export const contents = {
 		</>,
 		// <><b>{calculateAge('1978-11-12')}</b> years old</>,
 		<>
-			<b>{calculateAge("1999-04-12")}</b> years of work experience
+			<b>{calculateAge("1999-04-12")} years</b> of work <b>experience</b>
 		</>,
 		<>
 			lives in{" "}

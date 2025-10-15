@@ -4,7 +4,7 @@ import { contentToKey, splitLetterSpacing, getTotalPages, yearsFromNow } from '.
 import { contents } from '../constants/contents';
 import { Bottom, Contents, Header, Logo, Page, Paper, Top } from '../styles/structure.styled';
 import { TwoCols, TwoSpacedRows, About, Testemonials, Abilities } from '../styles/cover.styled';
-import { TagLine, Light, H1, TagLineSpaced, Unwrapable, PageNumber, CurrentPage, TotalPages, Small } from '../styles/etc.styled';
+import { TagLine, Light, H1, TagLineSpaced, Unwrapable, PageNumber, CurrentPage, TotalPages, Small, Mild } from '../styles/etc.styled';
 
 // =============================================================================
 
@@ -53,16 +53,13 @@ const Cover = () => {
 							<Light>senior</Light>{' '}
 							web developer
 						</Unwrapable>
-						{' '}
+						<br />
 						<Unwrapable>
 							<Small>
-								<Light>
-									frontend &amp; backend{' '}
-									{/* <Mild>(fullstack)</Mild> */}
-								</Light>
+								frontend &amp; backend{' '}
+								<Mild>(fullstack)</Mild>
 							</Small>
 						</Unwrapable>
-
 					</TagLineSpaced>
 					<TwoCols>
 						<TwoSpacedRows>

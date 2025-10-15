@@ -130,7 +130,8 @@ export const Abilities = styled.div`
 		align-items: center;
 
 		&:nth-child(-n+2) {
-			font-weight: 600;
+			background-color: ${config.colors.quote};
+			font-weight: 700;
 		}
 
 		&:nth-child(2n) {

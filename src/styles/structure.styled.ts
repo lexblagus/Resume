@@ -4,6 +4,10 @@ import { TwoCols } from './cover.styled';
 
 // =============================================================================
 
+const logoContentsSpacing = config.layout.spacing.tiny; // default: medium
+
+// =============================================================================
+
 export const Background = styled.div`
 	@media screen {
 		display: flex;
@@ -52,7 +56,7 @@ export const Page = styled.div`
 export const Top = styled.div`
 	display: grid;
 	grid-template-columns: ${config.elements.logo}mm 1fr;
-	gap: ${config.layout.spacing.medium}mm;
+	gap: ${logoContentsSpacing}mm;
 	height: ${config.elements.logo}mm;
 `;
 
@@ -74,7 +78,7 @@ export const Header = styled.div`
 export const Contents = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-left: ${(config.elements.logo + config.layout.spacing.medium)}mm;
+	margin-left: ${(config.elements.logo + logoContentsSpacing)}mm;
 	margin-top: ${config.layout.spacing.micro}mm;
 	overflow: hidden;
 
