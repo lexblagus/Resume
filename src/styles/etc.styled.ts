@@ -19,7 +19,7 @@ export const TagLineSpaced = styled(TagLine)`
 // -----------------------------------------------------------------------------
 
 export const Light = styled.span`
-	font-weight: 300;
+	font-weight: 400;
 	color: ${config.colors.dim};
 `;
 

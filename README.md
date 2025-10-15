@@ -1,5 +1,5 @@
 ## professional resume
-# alexander blagus
+# lexa blagus
 ### senior web developer frontend & backend (fullstack)
 
 Resume in React, Vite and Styled Components with beautifull layout for print and web.

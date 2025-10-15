@@ -1,4 +1,4 @@
-import { Abbr, PrintOnly, ScreenOnly, Unwrapable } from "../styles/etc.styled";
+import { Abbr, Dim, PrintOnly, ScreenOnly, Small, Tiny, Unwrapable } from "../styles/etc.styled";
 import { amountOfTime, calculateAge } from "../utils/aux";
 
 // =============================================================================
@@ -46,9 +46,9 @@ export const bulletClients = '◆';
 
 export const contents = {
 	about: [
-		<>+55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
-		<><a href="mailto:lex@blag.us"><Unwrapable><b>lex@</b>blag.us</Unwrapable></a></>,
-		<><a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
+		<><Tiny><Dim>phone</Dim></Tiny> +55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
+		<><Tiny><Dim>email</Dim></Tiny> <a href="mailto:lexa@blag.us"><Unwrapable><b>lexa@</b>blag.us</Unwrapable></a></>,
+		<><Tiny><Dim>website</Dim></Tiny> <a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
 		<>
 			<ScreenOnly>
 				<a href="https://resume.blag.us/LexaBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a>
@@ -57,7 +57,7 @@ export const contents = {
 				<a href="https://resume.blag.us/"><Unwrapable><b><Abbr>Web</Abbr></b> version</Unwrapable></a>
 			</PrintOnly>
 		</>,
-		<><b>{calculateAge('1978-11-12')}</b> years old</>,
+		// <><b>{calculateAge('1978-11-12')}</b> years old</>,
 		<><b>{calculateAge('1999-04-12')}</b> years of work experience</>,
 		<>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></>,
 		<>in <Unwrapable><b>Vila Madalena</b></Unwrapable>, <Unwrapable><Abbr>ZIP</Abbr> 05451-010</Unwrapable></>,
@@ -72,15 +72,61 @@ export const contents = {
 			title: <>founder of <b>Nicsware</b></>,
 		},
 		{
-			cite: <>Lex is a great professional, has a great technical knowledge, great person to work in groups and has great communication skills. Recommend to the highest levels of projects</>,
+			cite: <>Lexa is a great professional, has a great technical knowledge, great person to work in groups and has great communication skills. Recommend to the highest levels of projects</>,
 			person: <>Raquel Oliveira</>,
 			title: <>services operation manager, <b>IBM</b></>,
 		},
 		{
-			cite: <>Lex is a creative person who works hard to get tasks done on time, and many times earlier than requested. His teamwork and clear personality allow a great atmosphere around and makes easy the job's getting done</>,
+			cite: <>Lexa is a creative person who works hard to get tasks done on time, and many times earlier than requested. His teamwork and clear personality allow a great atmosphere around and makes easy the job's getting done</>,
 			person: <>Raul Dandolini</>,
 			title: <>senior system integration consultant, <b>Neoris</b></>,
 		},
+	],
+	letter: [
+		<>
+			<i>Hi!</i>
+		</>,
+		<>
+			I am 45 years old and I am located in São Paulo -
+			Brazil.
+		</>,
+		<>
+			I have more than 20 years of experience developing web
+			applications (frontend and backend) for several
+			different companies, both large enterprises as well as
+			medium and small sized companies like web agencies,
+			startups, consulting firms and others.
+		</>,
+		<>
+			I designed, coded, deployed and maintained web software
+			for any kind of application you can imagine: production
+			line control with large monitoring dashboards, financial
+			services payment gateways and checkout, complex personal
+			medical records editor, call center management data,
+			countless CMS systems and websites and many other
+			solutions.
+		</>,
+		<>
+			I’m passionate about creating impactful, efficient, and
+			user-friendly software solutions. From the paper
+			sketches with clients, coding the frontend and backend
+			software, integrating the systems around it, modeling
+			data in the database, configuring and maintaining the
+			server infrastructure, I bring a strong technical
+			foundation, an eye for design, and a hands-on approach
+			to problem-solving in every project I undertake.
+		</>,
+		<>
+			I'm excited to bring my skills to a team where I can
+			contribute meaningfully and continue learning.
+		</>,
+		<>
+			<i>
+				Thank you for considering me for your team!
+				<br />I look forward to the opportunity to work
+				together!
+			</i>
+		</>,
 	],
 	abilities: [
 		{ "name": "HTML, xHTML, MD, SVG, XML, …", "year": 1999 },
