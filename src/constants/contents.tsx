@@ -1,4 +1,11 @@
-import { Abbr, Dim, PrintOnly, ScreenOnly, Small, Tiny, Unwrapable } from "../styles/etc.styled";
+import {
+	Abbr,
+	Dim,
+	PrintOnly,
+	ScreenOnly,
+	Tiny,
+	Unwrapable,
+} from "../styles/etc.styled";
 import { amountOfTime, calculateAge } from "../utils/aux";
 
 // =============================================================================
@@ -37,125 +44,216 @@ Within cells interlinked.`;
 // -----------------------------------------------------------------------------
 
 // Used in Plain
-export const bulletAttributions = '●'; // ● ⏺ ·
-export const bulletAchievements = '⏶'; // ▲ ⏶ ▴
-export const bulletTechnologies = '▪'; // ▪ ■ ⏹ ◼ ◾ ⬛
-export const bulletClients = '◆';
+export const bulletAttributions = "●"; // ● ⏺ ·
+export const bulletAchievements = "⏶"; // ▲ ⏶ ▴
+export const bulletTechnologies = "▪"; // ▪ ■ ⏹ ◼ ◾ ⬛
+export const bulletClients = "◆";
 
 // -----------------------------------------------------------------------------
 
 export const contents = {
 	about: [
-		<><Tiny><Dim>phone</Dim></Tiny> +55 (11) <Unwrapable><b>985227084</b></Unwrapable></>,
-		<><Tiny><Dim>email</Dim></Tiny> <a href="mailto:lexa@blag.us"><Unwrapable><b>lexa@</b>blag.us</Unwrapable></a></>,
-		<><Tiny><Dim>website</Dim></Tiny> <a href="https://blag.us/">https://<b><Unwrapable>blag.us</Unwrapable></b>/</a></>,
+		<>
+			<Tiny>
+				<Dim>phone</Dim>
+			</Tiny>{" "}
+			+55 (11){" "}
+			<Unwrapable>
+				<b>985227084</b>
+			</Unwrapable>
+		</>,
+		<>
+			<Tiny>
+				<Dim>email</Dim>
+			</Tiny>{" "}
+			<a href="mailto:lexa@blag.us">
+				<Unwrapable>
+					<b>lexa@</b>blag.us
+				</Unwrapable>
+			</a>
+		</>,
+		<>
+			<Tiny>
+				<Dim>website</Dim>
+			</Tiny>{" "}
+			<a href="https://blag.us/">
+				https://
+				<b>
+					<Unwrapable>blag.us</Unwrapable>
+				</b>
+				/
+			</a>
+		</>,
 		<>
 			<ScreenOnly>
-				<a href="https://resume.blag.us/LexaBlagus.pdf"><Unwrapable><b><Abbr>PDF</Abbr></b> version</Unwrapable></a>
+				<a href="https://resume.blag.us/LexaBlagus.pdf">
+					<Unwrapable>
+						<b>
+							<Abbr>PDF</Abbr>
+						</b>{" "}
+						version
+					</Unwrapable>
+				</a>
 			</ScreenOnly>
 			<PrintOnly>
-				<a href="https://resume.blag.us/"><Unwrapable><b><Abbr>Web</Abbr></b> version</Unwrapable></a>
+				<a href="https://resume.blag.us/">
+					<Unwrapable>
+						<b>
+							<Abbr>Web</Abbr>
+						</b>{" "}
+						version
+					</Unwrapable>
+				</a>
 			</PrintOnly>
 		</>,
 		// <><b>{calculateAge('1978-11-12')}</b> years old</>,
-		<><b>{calculateAge('1999-04-12')}</b> years of work experience</>,
-		<>lives in <Unwrapable><b>São Paulo</b>, Brazil</Unwrapable></>,
-		<>in <Unwrapable><b>Vila Madalena</b></Unwrapable>, <Unwrapable><Abbr>ZIP</Abbr> 05451-010</Unwrapable></>,
-		<><b>Portuguese</b> as <Unwrapable>native language</Unwrapable></>,
-		<><Unwrapable>fluent in</Unwrapable> <b>English</b></>,
-		<><Unwrapable>availability for</Unwrapable> <b>travel</b></>,
+		<>
+			<b>{calculateAge("1999-04-12")}</b> years of work experience
+		</>,
+		<>
+			lives in{" "}
+			<Unwrapable>
+				<b>São Paulo</b>, Brazil
+			</Unwrapable>
+		</>,
+		<>
+			in{" "}
+			<Unwrapable>
+				<b>Vila Madalena</b>
+			</Unwrapable>
+			,{" "}
+			<Unwrapable>
+				<Abbr>ZIP</Abbr> 05451-010
+			</Unwrapable>
+		</>,
+		<>
+			<b>Portuguese</b> as <Unwrapable>native language</Unwrapable>
+		</>,
+		<>
+			<Unwrapable>fluent in</Unwrapable> <b>English</b>
+		</>,
+		<>
+			<Unwrapable>availability for</Unwrapable> <b>travel</b>
+		</>,
 	],
 	testemonials: [
 		{
-			cite: <>She has been determined during the whole process, giving creative solutions for the challenges of the work</>,
+			cite: (
+				<>
+					She has been determined during the whole process, giving
+					creative solutions for the challenges of the work
+				</>
+			),
 			person: <>Alexandre Nakasato</>,
-			title: <>founder of <b>Nicsware</b></>,
+			title: (
+				<>
+					founder of <b>Nicsware</b>
+				</>
+			),
 		},
 		{
-			cite: <>Lexa is a great professional, has a great technical knowledge, great person to work in groups and has great communication skills. Recommend to the highest levels of projects</>,
+			cite: (
+				<>
+					Lexa is a great professional, has a great technical
+					knowledge, great person to work in groups and has great
+					communication skills. Recommend to the highest levels of
+					projects
+				</>
+			),
 			person: <>Raquel Oliveira</>,
-			title: <>services operation manager, <b>IBM</b></>,
+			title: (
+				<>
+					services operation manager, <b>IBM</b>
+				</>
+			),
 		},
 		{
-			cite: <>Lexa is a creative person who works hard to get tasks done on time, and many times earlier than requested. His teamwork and clear personality allow a great atmosphere around and makes easy the job's getting done</>,
+			cite: (
+				<>
+					Lexa is a creative person who works hard to get tasks done
+					on time, and many times earlier than requested. His teamwork
+					and clear personality allow a great atmosphere around and
+					makes easy the job's getting done
+				</>
+			),
 			person: <>Raul Dandolini</>,
-			title: <>senior system integration consultant, <b>Neoris</b></>,
+			title: (
+				<>
+					senior system integration consultant, <b>Neoris</b>
+				</>
+			),
 		},
 	],
 	letter: [
 		<>
 			<i>Hi!</i>
 		</>,
+		<>I am 45 years old and I am located in São Paulo - Brazil.</>,
 		<>
-			I am 45 years old and I am located in São Paulo -
-			Brazil.
+			I have more than 20 years of experience developing web applications
+			(frontend and backend) for several different companies, both large
+			enterprises as well as medium and small sized companies like web
+			agencies, startups, consulting firms and others.
 		</>,
 		<>
-			I have more than 20 years of experience developing web
-			applications (frontend and backend) for several
-			different companies, both large enterprises as well as
-			medium and small sized companies like web agencies,
-			startups, consulting firms and others.
-		</>,
-		<>
-			I designed, coded, deployed and maintained web software
-			for any kind of application you can imagine: production
-			line control with large monitoring dashboards, financial
-			services payment gateways and checkout, complex personal
-			medical records editor, call center management data,
-			countless CMS systems and websites and many other
+			I designed, coded, deployed and maintained web software for any kind
+			of application you can imagine: production line control with large
+			monitoring dashboards, financial services payment gateways and
+			checkout, complex personal medical records editor, call center
+			management data, countless CMS systems and websites and many other
 			solutions.
 		</>,
 		<>
 			I’m passionate about creating impactful, efficient, and
-			user-friendly software solutions. From the paper
-			sketches with clients, coding the frontend and backend
-			software, integrating the systems around it, modeling
-			data in the database, configuring and maintaining the
-			server infrastructure, I bring a strong technical
-			foundation, an eye for design, and a hands-on approach
-			to problem-solving in every project I undertake.
+			user-friendly software solutions. From the paper sketches with
+			clients, coding the frontend and backend software, integrating the
+			systems around it, modeling data in the database, configuring and
+			maintaining the server infrastructure, I bring a strong technical
+			foundation, an eye for design, and a hands-on approach to
+			problem-solving in every project I undertake.
 		</>,
 		<>
-			I'm excited to bring my skills to a team where I can
-			contribute meaningfully and continue learning.
+			I'm excited to bring my skills to a team where I can contribute
+			meaningfully and continue learning.
 		</>,
 		<>
 			<i>
 				Thank you for considering me for your team!
-				<br />I look forward to the opportunity to work
-				together!
+				<br />I look forward to the opportunity to work together!
 			</i>
 		</>,
 	],
 	abilities: [
-		{ "name": "HTML, xHTML, MD, SVG, XML, …", "year": 1999 },
-		{ "name": "CSS, SCSS, … (pre-processors)", "year": 1999 },
-		{ "name": "Javascript & ES6", "year": 2001 },
-		{ "name": "Typescript", "year": 2022 },
-		{ "name": "React & JSX", "year": 2019 },
-		{ "name": "NodeJS & ExpressJS", "year": 2013 },
-		{ "name": "HTTP & RESTful APIs", "year": 2013 },
-		{ "name": "WebSockets", "year": 2020 },
-		{ "name": "Redux", "year": 2019 },
-		{ "name": "NextJS, Webpack, Gulp (package builders)", "year": 2017 },
-		{ "name": "jQuery", "year": 2005 },
-		{ "name": "DAPP (blockchain, MetaMask, Web3.js, Ganache, …)", "year": 2022 },
-		{ "name": "Styled components, Material UI", "year": 2022 },
-		{ "name": "Oracle", "year": 2002 },
-		{ "name": "Microsoft SQL Server, MySQL, PostgreSQL, …", "year": 2005 },
-		{ "name": "Neo4J & Cypher", "year": 2013 },
-		{ "name": "E2E: Playwright, …", "year": 2023 },
-		{ "name": "Unitary: Jest, Mocha, …", "year": 2017 }, // Chai, Sinon
-		{ "name": "Git & SVN", "year": 2005 },
-		{ "name": "Monorepo PNPM", "year": 2022 },
-		{ "name": "Jenkins/GoCD", "year": 2017 },
-		{ "name": "AWS: ECS, EC2, DynamoDB, Lambda, …", "year": 2013 },
-		{ "name": "Telemetrics: Splunk, NewRelic", "year": 2019 },
-		{ "name": "Bash", "year": 2015 },
-		{ "name": "Linux / MacOS", "year": 2011 },
+		{ name: "HTML, xHTML, MD, SVG, XML, …", year: 1999 },
+		{ name: "CSS, SCSS, … (pre-processors)", year: 1999 },
+		{ name: "Javascript & ES6", year: 2001 },
+		{ name: "Typescript", year: 2022 },
+		{ name: "React & JSX", year: 2019 },
+		{ name: "NodeJS & ExpressJS", year: 2013 },
+		{ name: "HTTP & RESTful APIs", year: 2013 },
+		{ name: "WebSockets", year: 2020 },
+		{ name: "Redux", year: 2019 },
+		{ name: "NextJS, Webpack, Gulp (package builders)", year: 2017 },
+		{ name: "jQuery", year: 2005 },
+		{
+			name: "DAPP (blockchain, MetaMask, Web3.js, Ganache, …)",
+			year: 2022,
+		},
+		{ name: "Styled components, Material UI", year: 2022 },
+		{ name: "Oracle", year: 2002 },
+		{ name: "Microsoft SQL Server, MySQL, PostgreSQL, …", year: 2005 },
+		{ name: "Neo4J & Cypher", year: 2013 },
+		{ name: "E2E: Playwright, …", year: 2023 },
+		{ name: "Unitary: Jest, Mocha, …", year: 2017 }, // Chai, Sinon
+		{ name: "Git & SVN", year: 2005 },
+		{ name: "Monorepo PNPM", year: 2022 },
+		{ name: "Jenkins/GoCD", year: 2017 },
+		{ name: "AWS: ECS, EC2, DynamoDB, Lambda, …", year: 2013 },
+		{ name: "Telemetrics: Splunk, NewRelic", year: 2019 },
+		{ name: "Bash", year: 2015 },
+		{ name: "Linux / MacOS", year: 2011 },
 		// { "name": "Windows Server", "year": 2002 },
-		{ "name": "Adobe applications", "year": 1997 },
+		{ name: "Adobe applications", year: 1997 },
 		// { "name": "Apache & Nginx", "year": 2001 },
 		// { "name": "Microsoft .Net C#", "year": 2006 },
 		// { "name": "PHP", "year": 2004 },
@@ -177,9 +275,9 @@ export const contents = {
 				[11], */
 			],
 			past: [
-				[0, 1, 2, ],
-				[3, 4, 5,],
-				[6, 7, 8, 9, ],
+				[0, 1, 2],
+				[3, 4, 5],
+				[6, 7, 8, 9],
 				[10, 11],
 			],
 		},
@@ -201,51 +299,80 @@ export const contents = {
 			},
 			*/
 			{
-				company: 'Ambush',
+				company: "Ambush",
 				period: {
 					start: [12, 2024],
 					end: [5, 2025],
 				},
-				title: 'Fullstack Senior Web Developer',
-				sector: 'Software design and consulting',
-				about: 'Ambush integrates top-tier remote engineers and designers into U.S. tech product teams, delivering human-centered partnerships built for quality, compliance, and enterprise scale.',
+				title: "Fullstack Senior Web Developer",
+				sector: "Software design and consulting",
+				about: "Ambush integrates top-tier remote engineers and designers into U.S. tech product teams, delivering human-centered partnerships built for quality, compliance, and enterprise scale.",
 				clients: [<>PayPal</>],
 				attributions: [],
 				achievements: [
-					<>Create and change email templates for massive transactional operations</>,
-					<>Make HTML compatible with all rendering engines for a very broad spectrum of email clients</>,
+					<>
+						Create and change email templates for massive
+						transactional operations
+					</>,
+					<>
+						Make HTML compatible with all rendering engines for a
+						very broad spectrum of email clients
+					</>,
 				],
-				technologies: [
-					<>React</>,
-					<>JSX</>,
-				],
+				technologies: [<>React</>, <>JSX</>],
 			},
 			{
-				company: 'Applied Blockchain',
+				company: "Applied Blockchain",
 				period: {
 					start: [1, 2022],
 					end: [4, 2024],
 				},
-				title: 'Fullstack Senior Web Developer',
-				sector: 'blockchain technology',
-				about: 'Specialized in DeFi, Web3, cryptocurrency, and financial services, offering blockchain solutions across industries like energy, supply chain, telecommunications, and retail',
-				clients: [
-					<>Shell</>,
-					<>Mishcon del Reya</>,
-					<>UppFirst</>,
-				],
+				title: "Fullstack Senior Web Developer",
+				sector: "blockchain technology",
+				about: "Specialized in DeFi, Web3, cryptocurrency, and financial services, offering blockchain solutions across industries like energy, supply chain, telecommunications, and retail",
+				clients: [<>Shell</>, <>Mishcon del Reya</>, <>UppFirst</>],
 				attributions: [
-					<>Develop dApps that integrate blockchain features like wallet support and NFT rendering</>,
-					<>Ensure accurate cryptocurrency calculations with multi-decimal values (satoshis/gweis)</>,
-					<>Collaborate with designers to achieve pixel-perfect layouts</>,
-					<>Coordinate with global teams across different time zones and cultures</>,
-					<>Present technical progress to clients, addressing questions and discussing next steps</>,
+					<>
+						Develop dApps that integrate blockchain features like
+						wallet support and NFT rendering
+					</>,
+					<>
+						Ensure accurate cryptocurrency calculations with
+						multi-decimal values (satoshis/gweis)
+					</>,
+					<>
+						Collaborate with designers to achieve pixel-perfect
+						layouts
+					</>,
+					<>
+						Coordinate with global teams across different time zones
+						and cultures
+					</>,
+					<>
+						Present technical progress to clients, addressing
+						questions and discussing next steps
+					</>,
 				],
 				achievements: [
-					<>Developed a dApp for a custom cryptocurrency focused on green causes, with features such as minting, airdrop, and coin swaps, along with an admin app for managing the currency</>,
-					<>Built an e-commerce platform linked to NFTs, emphasizing responsive design and detailed layout rendering</>,
-					<>Added and maintained features for a real-time energy trading application, including CSV parsing and product expiry controls</>,
-					<>Recreated the company's static website using a WYSIWYG tool for better team collaboration</>,
+					<>
+						Developed a dApp for a custom cryptocurrency focused on
+						green causes, with features such as minting, airdrop,
+						and coin swaps, along with an admin app for managing the
+						currency
+					</>,
+					<>
+						Built an e-commerce platform linked to NFTs, emphasizing
+						responsive design and detailed layout rendering
+					</>,
+					<>
+						Added and maintained features for a real-time energy
+						trading application, including CSV parsing and product
+						expiry controls
+					</>,
+					<>
+						Recreated the company's static website using a WYSIWYG
+						tool for better team collaboration
+					</>,
 				],
 				technologies: [
 					<>React</>,
@@ -260,56 +387,97 @@ export const contents = {
 				],
 			},
 			{
-				company: 'PagSeguro',
+				company: "PagSeguro",
 				period: {
 					start: [10, 2016],
 					end: [1, 2022],
 				},
-				title: 'Senior frontend software engineer',
-				sector: 'financial services',
-				about: 'PagSeguro offers innovative solutions in financial services and means of payment, automating the purchase, sale and wiring process in a simple and secure manner',
+				title: "Senior frontend software engineer",
+				sector: "financial services",
+				about: "PagSeguro offers innovative solutions in financial services and means of payment, automating the purchase, sale and wiring process in a simple and secure manner",
 				clients: [],
 				attributions: [
-					<>Implement high-quality web solutions using modern frameworks</>,
-					<>Collaborate with backend developers to integrate frontend solutions</>,
+					<>
+						Implement high-quality web solutions using modern
+						frameworks
+					</>,
+					<>
+						Collaborate with backend developers to integrate
+						frontend solutions
+					</>,
 					<>Deploy and maintain applications in cloud environments</>,
-					<>Work closely with product owners to plan and develop solutions</>,
+					<>
+						Work closely with product owners to plan and develop
+						solutions
+					</>,
 					<>Plan and execute agile roadmaps using Scrum and Kanban</>,
-					<>Mentor team members through pair programming and code reviews</>,
-					<>Collaborate with UI/UX teams to create user-friendly designs</>,
+					<>
+						Mentor team members through pair programming and code
+						reviews
+					</>,
+					<>
+						Collaborate with UI/UX teams to create user-friendly
+						designs
+					</>,
 					<>Support and refactor monolithic legacy systems</>,
 				],
 				achievements: [
-					<>Developed UIs for managing payment subscriptions using Apache Velocity</>,
-					<>Designed a back-office system for customer segmentation and tax management</>,
+					<>
+						Developed UIs for managing payment subscriptions using
+						Apache Velocity
+					</>,
+					<>
+						Designed a back-office system for customer segmentation
+						and tax management
+					</>,
 					<>Built a payment link service using NodeJS and React</>,
-					<>Developed and maintained a new sandbox website for developer tools</>,
-					<>Added new payment methods to the legacy checkout system</>,
-					<>Implemented a WebSockets pooling solution for real-time payment status</>,
+					<>
+						Developed and maintained a new sandbox website for
+						developer tools
+					</>,
+					<>
+						Added new payment methods to the legacy checkout system
+					</>,
+					<>
+						Implemented a WebSockets pooling solution for real-time
+						payment status
+					</>,
 				],
 				technologies: [
-					<>HTML5, JSX, Handlebars, Apache Velocity Template Language (VTL)</>,
+					<>
+						HTML5, JSX, Handlebars, Apache Velocity Template
+						Language (VTL)
+					</>,
 					<>CSS, SCSS, BEM</>,
 					<>Javascript: React, Redux, NodeJS, ES6, JSON, jQuery</>,
-					<>NodeJS: ExpressJS for BFF (backend for frontend) and RESTfull API development</>,
-					<>TDD: test-driven development with Jest, Mocha, Chai, Sinon</>,
+					<>
+						NodeJS: ExpressJS for BFF (backend for frontend) and
+						RESTfull API development
+					</>,
+					<>
+						TDD: test-driven development with Jest, Mocha, Chai,
+						Sinon
+					</>,
 					<>Package builders: Webpack, NextJS, Gulp</>,
 					<>Git, Atlassian Stash/BitBucket</>,
 					<>DevOps: Jenkins, GoCD, Apache Mesos, Docker</>,
 					<>AWS: ECS, EC2, DynamoDB</>,
 					<>Telemetrics: Splunk, NewRelic</>,
-					<>Patterns and methodologies: domain-driven design, Kanban, agile</>,
+					<>
+						Patterns and methodologies: domain-driven design,
+						Kanban, agile
+					</>,
 				],
 			},
 			{
-				company: 'x128',
+				company: "x128",
 				period: {
 					start: [10, 2014],
 					end: [9, 2016],
 				},
-				title: 'CEO and founder',
-				sector: 'Software design and consulting',
-				about: '',
+				title: "CEO and founder",
+				sector: "Software design and consulting",
+				about: "",
 				clients: [
 					<>Olé Studio</>,
 					<>ClickBebe</>,
@@ -326,11 +494,31 @@ export const contents = {
 				],
 				attributions: [],
 				achievements: [
-					<>Integrated and customized a content management system (<Abbr>CMS</Abbr>), product catalog and payment checkout, chat rooms with high-audience and auto-scalable infrastructure, user forums, self-service announcements editor for buying and selling goods</>,
-					<>Built a customer relationship management (<Abbr>CMS</Abbr>) and enterprise resource planning (<Abbr>ERP</Abbr>) for a metallurgic goods reseller</>,
-					<>Developed a data mining tool to search for airline tickets best prices</>,
-					<>Built, deployed and maintained several e-commerce websites for different publics: fashion, beverage, pregnant/lactating woman and many others</>,
-					<>Integrated a governance software for Itaú bank using the canadian governance solution ChangePoint</>,
+					<>
+						Integrated and customized a content management system (
+						<Abbr>CMS</Abbr>), product catalog and payment checkout,
+						chat rooms with high-audience and auto-scalable
+						infrastructure, user forums, self-service announcements
+						editor for buying and selling goods
+					</>,
+					<>
+						Built a customer relationship management (
+						<Abbr>CMS</Abbr>) and enterprise resource planning (
+						<Abbr>ERP</Abbr>) for a metallurgic goods reseller
+					</>,
+					<>
+						Developed a data mining tool to search for airline
+						tickets best prices
+					</>,
+					<>
+						Built, deployed and maintained several e-commerce
+						websites for different publics: fashion, beverage,
+						pregnant/lactating woman and many others
+					</>,
+					<>
+						Integrated a governance software for Itaú bank using the
+						canadian governance solution ChangePoint
+					</>,
 				],
 				technologies: [
 					<>NodeJS</>,
@@ -338,27 +526,42 @@ export const contents = {
 					<>Microsoft .Net with C# using SVN</>,
 					<>Ruby on Rails</>,
 					<>MySQL</>,
-					<>Wordpress with Woocommerce (providing plugin integration, creation and customization)</>,
+					<>
+						Wordpress with Woocommerce (providing plugin
+						integration, creation and customization)
+					</>,
 					<>AWS ECS with auto-scaling</>,
 					<>Git and GitLab</>,
 					<>Changepoint governance software</>,
 				],
 			},
 			{
-				company: 'Nicsware',
+				company: "Nicsware",
 				period: {
 					start: [7, 2013],
 					end: [7, 2014],
 				},
-				title: 'Software architect',
-				sector: 'Healthcare software startup',
-				about: '',
+				title: "Software architect",
+				sector: "Healthcare software startup",
+				about: "",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>Developed a medical record software with flexible form editor, clinical schedule, extensible patient contacts record system; with sharing features between physicians protected via <Abbr>ACL</Abbr></>,
-					<>Built a framework with web server in Javascript/NodeJS using graphical database Neo4J as data storage; all communication pipelines in JSON and responsive layout</>,
-					<>Created a business plan including financial planning, marketing strategy and selling support materials</>,
+					<>
+						Developed a medical record software with flexible form
+						editor, clinical schedule, extensible patient contacts
+						record system; with sharing features between physicians
+						protected via <Abbr>ACL</Abbr>
+					</>,
+					<>
+						Built a framework with web server in Javascript/NodeJS
+						using graphical database Neo4J as data storage; all
+						communication pipelines in JSON and responsive layout
+					</>,
+					<>
+						Created a business plan including financial planning,
+						marketing strategy and selling support materials
+					</>,
 				],
 				technologies: [
 					<>HTML</>,
@@ -370,14 +573,14 @@ export const contents = {
 				],
 			},
 			{
-				company: 'Neoris',
+				company: "Neoris",
 				period: {
 					start: [6, 2011],
 					end: [7, 2013],
 				},
-				title: 'Senior system integration consultant',
-				sector: 'Software consulting services',
-				about: '',
+				title: "Senior system integration consultant",
+				sector: "Software consulting services",
+				about: "",
 				clients: [
 					<>Usiminas</>,
 					<>Vale</>,
@@ -387,9 +590,24 @@ export const contents = {
 				],
 				attributions: [],
 				achievements: [
-					<>Developed software for production lines for large factories with special focus in <Abbr>OEE</Abbr> (overall equipment efficency): charts showing the machinery maintenance stop summary and staff production performance</>,
-					<>Upgraded the routing layout of the videowall, a panel measuring 16.6×9.3 meters atthe control center that monitors 24×7 allthe processes of a large-scale siderurgical plant</>,
-					<>Created <Abbr>HDTV</Abbr> dashboards for the port operations tower that controlls the ship’s parking, load and unload</>,
+					<>
+						Developed software for production lines for large
+						factories with special focus in <Abbr>OEE</Abbr>{" "}
+						(overall equipment efficency): charts showing the
+						machinery maintenance stop summary and staff production
+						performance
+					</>,
+					<>
+						Upgraded the routing layout of the videowall, a panel
+						measuring 16.6×9.3 meters atthe control center that
+						monitors 24×7 allthe processes of a large-scale
+						siderurgical plant
+					</>,
+					<>
+						Created <Abbr>HDTV</Abbr> dashboards for the port
+						operations tower that controlls the ship’s parking, load
+						and unload
+					</>,
 				],
 				technologies: [
 					<>SAP MII</>,
@@ -404,20 +622,33 @@ export const contents = {
 				],
 			},
 			{
-				company: 'Telefonica',
+				company: "Telefonica",
 				period: {
 					start: [8, 2008],
 					end: [4, 2011],
 				},
-				title: 'Software architect',
-				sector: 'Large scale telecomunications',
-				about: '',
+				title: "Software architect",
+				sector: "Large scale telecomunications",
+				about: "",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>Created a portal with several applications connected to a great deal of data sources for managing installation and repair in telecommunications landlines of corporate customers</>,
-					<>Integrated several databases (Oracle, Microsoft SQL Server, MySQL, …) for online analytical processing (<Abbr>OLAP</Abbr>)</>,
-					<>Built a <Abbr>PHP</Abbr> framework using <Abbr>MVC</Abbr> pattern with a <Abbr>UIX</Abbr> interactive styleguide</>,
+					<>
+						Created a portal with several applications connected to
+						a great deal of data sources for managing installation
+						and repair in telecommunications landlines of corporate
+						customers
+					</>,
+					<>
+						Integrated several databases (Oracle, Microsoft SQL
+						Server, MySQL, …) for online analytical processing (
+						<Abbr>OLAP</Abbr>)
+					</>,
+					<>
+						Built a <Abbr>PHP</Abbr> framework using{" "}
+						<Abbr>MVC</Abbr> pattern with a <Abbr>UIX</Abbr>{" "}
+						interactive styleguide
+					</>,
 				],
 				technologies: [
 					<>HTML</>,
@@ -433,20 +664,33 @@ export const contents = {
 				],
 			},
 			{
-				company: 'FastCash',
+				company: "FastCash",
 				period: {
 					start: [9, 2006],
 					end: [8, 2008],
 				},
-				title: 'Software architect and tech lead',
-				sector: 'Virtual currency platform for micro finances',
-				about: '',
+				title: "Software architect and tech lead",
+				sector: "Virtual currency platform for micro finances",
+				about: "",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>Developed a micro payment gateway system for all payment options available in Brazil, alongside its conciliation logic and digital product delivery: pincodes or electronic credit in partner systems</>,
-					<>Coded deep processual changes in the e-commerce platform, like product composition, checkout process and physical with virtual stock management</>,
-					<>Created an extranet platform for integrated business partners to existing cloud systems for sales and management of digital goods</>,
+					<>
+						Developed a micro payment gateway system for all payment
+						options available in Brazil, alongside its conciliation
+						logic and digital product delivery: pincodes or
+						electronic credit in partner systems
+					</>,
+					<>
+						Coded deep processual changes in the e-commerce
+						platform, like product composition, checkout process and
+						physical with virtual stock management
+					</>,
+					<>
+						Created an extranet platform for integrated business
+						partners to existing cloud systems for sales and
+						management of digital goods
+					</>,
 				],
 				technologies: [
 					<>Microsoft ASP & IIS</>,
@@ -458,19 +702,25 @@ export const contents = {
 				],
 			},
 			{
-				company: 'IBM',
+				company: "IBM",
 				period: {
 					start: [8, 2005],
 					end: [7, 2006],
 				},
-				title: 'Quality assurance specialist',
-				sector: 'Technology services and hardware',
-				about: '',
+				title: "Quality assurance specialist",
+				sector: "Technology services and hardware",
+				about: "",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>quality assurance on the website IBM.com (all americas) and intranet W3 (USA)</>,
-					<>deployed a skill mapping tool to gather staff abilities and their allocation in projects</>,
+					<>
+						quality assurance on the website IBM.com (all americas)
+						and intranet W3 (USA)
+					</>,
+					<>
+						deployed a skill mapping tool to gather staff abilities
+						and their allocation in projects
+					</>,
 				],
 				technologies: [
 					<>HTML & CSS</>,
@@ -480,14 +730,14 @@ export const contents = {
 				],
 			},
 			{
-				company: 'IBEX',
+				company: "IBEX",
 				period: {
 					start: [11, 2004],
 					end: [8, 2005],
 				},
-				title: 'Frontend developer and UIX designer',
-				sector: 'Digital agency',
-				about: '',
+				title: "Frontend developer and UIX designer",
+				sector: "Digital agency",
+				about: "",
 				clients: [
 					<>Telefonica</>,
 					<>Gerdau</>,
@@ -496,8 +746,14 @@ export const contents = {
 				],
 				attributions: [],
 				achievements: [
-					<>Rebuilt the game framework for corporate incentive campaigns with greater modularity, such as skins, score by time or accuracy and many other features</>,
-					<>Built a <Abbr>CMS</Abbr> for user-customizable websites</>,
+					<>
+						Rebuilt the game framework for corporate incentive
+						campaigns with greater modularity, such as skins, score
+						by time or accuracy and many other features
+					</>,
+					<>
+						Built a <Abbr>CMS</Abbr> for user-customizable websites
+					</>,
 					<>Worked on visual identity for products</>,
 				],
 				technologies: [
@@ -508,20 +764,29 @@ export const contents = {
 				],
 			},
 			{
-				company: 'Santander',
+				company: "Santander",
 				period: {
 					start: [6, 2003],
 					end: [11, 2004],
 				},
-				title: 'Software architect',
-				sector: 'Worldwide banking and financial services',
-				about: '',
+				title: "Software architect",
+				sector: "Worldwide banking and financial services",
+				about: "",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>Developed a web application for a diversity of financial dashboards, all deeply customizable</>,
-					<>Prototyped a continental intranet with financial reports, news, documents, photos and more</>,
-					<>Created several management tools, like task status, meeting schedule, document repository, webchat, …</>,
+					<>
+						Developed a web application for a diversity of financial
+						dashboards, all deeply customizable
+					</>,
+					<>
+						Prototyped a continental intranet with financial
+						reports, news, documents, photos and more
+					</>,
+					<>
+						Created several management tools, like task status,
+						meeting schedule, document repository, webchat, …
+					</>,
 				],
 				technologies: [
 					<>HTML & CSS</>,
@@ -531,18 +796,22 @@ export const contents = {
 				],
 			},
 			{
-				company: 'Chris Cintos',
+				company: "Chris Cintos",
 				period: {
 					start: [12, 2000],
 					end: [11, 2002],
 				},
-				title: 'Software developer',
-				sector: 'Automotive Components Manufacturing',
-				about: 'Manufacturer of high-quality seat belts for the automotive industry',
+				title: "Software developer",
+				sector: "Automotive Components Manufacturing",
+				about: "Manufacturer of high-quality seat belts for the automotive industry",
 				clients: [],
 				attributions: [],
 				achievements: [
-					<>Developed an intranet application with several modules, including human resources, help desk, project management, training, etc.</>,
+					<>
+						Developed an intranet application with several modules,
+						including human resources, help desk, project
+						management, training, etc.
+					</>,
 					<>Created the company's institutional website</>,
 				],
 				technologies: [
@@ -552,14 +821,14 @@ export const contents = {
 					<>Oracle RDBMS</>,
 				],
 			},
-		].map(experience => ({
+		].map((experience) => ({
 			...experience,
 			period: {
 				amount: amountOfTime(
 					experience.period.start[0],
 					experience.period.start[1],
 					experience.period.end[0],
-					experience.period.end[1],
+					experience.period.end[1]
 				),
 				...experience.period,
 			},
@@ -570,4 +839,3 @@ export const contents = {
 // -----------------------------------------------------------------------------
 
 export type Contents = typeof contents;
-
