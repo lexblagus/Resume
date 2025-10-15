@@ -2,6 +2,7 @@
 set -e
 set +x
 
+SECRET_FOLDER=~/Spool/secret
 
 echo ''
 echo '--------------------------------------------------------------------------------'
@@ -52,7 +53,7 @@ zip -r ./deploy/$ARCHIVE ./dist
 rm -rf ./dist
 
 
-if [ ! -f secret/port ] || [ ! -f secret/host ] || [ ! -f secret/user ] || [ ! -f secret/pass ]; then
+if [ ! -f $SECRET_FOLDER/port ] || [ ! -f $SECRET_FOLDER/host ] || [ ! -f $SECRET_FOLDER/user ] || [ ! -f $SECRET_FOLDER/pass ]; then
   echo ''
   echo '--------------------------------------------------------------------------------'
   echo 'Missing files in "secret": host (with user), pass and port'
@@ -63,12 +64,12 @@ if [ ! -f secret/port ] || [ ! -f secret/host ] || [ ! -f secret/user ] || [ ! -
 else
   echo ''
   echo '--------------------------------------------------------------------------------'
-  echo "Upload & publish to $(cat secret/host)"
+  echo "Upload & publish to $(cat $SECRET_FOLDER/host)"
   echo '--------------------------------------------------------------------------------'
 
-  sshpass -f secret/pass scp -P $(cat secret/port) ./deploy/$ARCHIVE $(cat secret/user)@$(cat secret/host):$REMOTE_PATH
+  sshpass -f $SECRET_FOLDER/pass scp -P $(cat $SECRET_FOLDER/port) ./deploy/$ARCHIVE $(cat $SECRET_FOLDER/user)@$(cat $SECRET_FOLDER/host):$REMOTE_PATH
   rm -rf ./deploy
-  sshpass -f secret/pass ssh $(cat secret/user)@$(cat secret/host) -p $(cat secret/port) "cd $REMOTE_PATH && rm -rf ./dist && unzip ./$ARCHIVE && rm ./$ARCHIVE"
+  sshpass -f $SECRET_FOLDER/pass ssh $(cat $SECRET_FOLDER/user)@$(cat $SECRET_FOLDER/host) -p $(cat $SECRET_FOLDER/port) "cd $REMOTE_PATH && rm -rf ./dist && unzip ./$ARCHIVE && rm ./$ARCHIVE"
 
 
   echo ''
