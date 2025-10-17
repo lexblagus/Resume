@@ -11,15 +11,18 @@ export default defineConfig(
 							[
 								'babel-plugin-styled-components',
 								{
-									// minify: true,
+									pure: true,
+									minify: false,
 									// namespace: 'NAMESPACE_HERE',
-									// fileName: true,
-									// displayName: true,
+									fileName: true, // displayName handles this
+									displayName: true,
 									meaninglessFileNames: [
 										'index',
 										'styles',
 										'styled',
 									],
+									// namespace: 'prefix--',
+									ssr: true,
 								},
 							],
 						],

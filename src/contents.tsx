@@ -5,15 +5,15 @@ import {
 	ScreenOnly,
 	Tiny,
 	Unwrapable,
-} from "../styles/etc.styled";
-import { amountOfTime, calculateAge } from "../utils/aux";
+} from "./styles/etc.styled";
+import { amountOfTime, calculateAge } from "./utils";
 
 // -----------------------------------------------------------------------------
 
 // Used in Plain
 export const bulletAttributions = "●"; // ● ⏺ ·
 export const bulletAchievements = "⏶"; // ▲ ⏶ ▴
-export const bulletTechnologies = "▪"; // ▪ ■ ⏹ ◼ ◾ ⬛
+export const bulletTechnologies = "■"; // ▪ ■ ⏹ ◼ ◾ ⬛
 export const bulletClients = "◆";
 
 // -----------------------------------------------------------------------------
@@ -195,39 +195,45 @@ export const contents = {
 	],
 	abilities: [
 		{ name: "HTML, xHTML, MD, SVG, XML, …", year: 1999 },
-		{ name: "CSS, SCSS, … (pre-processors)", year: 1999 },
-		{ name: "Javascript & ES6", year: 2001 },
+		{ name: "CSS, SCSS, SASS, … (pre-processors)", year: 1999 },
+		{ name: "Javascript (Vanilla)", year: 2001 },
+		{ name: "ECMAScript (ES5, ES6, …)", year: 2016 },
 		{ name: "Typescript", year: 2022 },
 		{ name: "React & JSX", year: 2019 },
-		{ name: "NodeJS & ExpressJS", year: 2013 },
+		{ name: "Redux", year: 2019 },
+		{ name: "NodeJS", year: 2013 },
+		{ name: "ExpressJS", year: 2018 },
 		{ name: "HTTP & RESTful APIs", year: 2013 },
 		{ name: "WebSockets", year: 2020 },
-		{ name: "Redux", year: 2019 },
 		{ name: "NextJS, Webpack, Gulp (package builders)", year: 2017 },
 		{ name: "jQuery", year: 2005 },
 		{
-			name: "DAPP (blockchain, MetaMask, Web3.js, Ganache, …)",
+			name: "DAPP & Web3: blockchain, MetaMask, Web3.js, Ganache, …",
 			year: 2022,
 		},
-		{ name: "Styled components, Material UI", year: 2022 },
+		{ name: "Styled components", year: 2022 },
+		{ name: "Material UI", year: 2015 },
+		{ name: "Bootstrap", year: 2015 },
 		{ name: "Oracle", year: 2002 },
 		{ name: "Microsoft SQL Server, MySQL, PostgreSQL, …", year: 2005 },
 		{ name: "Neo4J & Cypher", year: 2013 },
 		{ name: "E2E: Playwright, …", year: 2023 },
 		{ name: "Unitary: Jest, Mocha, …", year: 2017 }, // Chai, Sinon
-		{ name: "Git & SVN", year: 2005 },
-		{ name: "Monorepo PNPM", year: 2022 },
-		{ name: "Jenkins/GoCD", year: 2017 },
-		{ name: "AWS: ECS, EC2, DynamoDB, Lambda, …", year: 2013 },
+		{ name: "Git, SVN, SourceTree", year: 2013 },
+		{ name: "NPM, PNPM, Yarn", year: 2016 },
+		{ name: "Jenkins, GoCD", year: 2017 },
+		{ name: "AWS: ECS, EC2, DynamoDB, Lambda, CloudWatch, …", year: 2013 },
+		{ name: "Apache & Nginx", year: 2001 },
+		{ name: "Linux / MacOS / Bash", year: 2011 },
+		{ name: "Microsoft Windows Server", year: 2002 },
 		{ name: "Telemetrics: Splunk, NewRelic", year: 2019 },
-		{ name: "Bash", year: 2015 },
-		{ name: "Linux / MacOS", year: 2011 },
-		// { "name": "Windows Server", "year": 2002 },
-		{ name: "Adobe applications", year: 1997 },
-		// { "name": "Apache & Nginx", "year": 2001 },
+		{
+			name: "Adobe: Photoshop, Illustrator, InDesign, Premiere, AfterEffects …",
+			year: 1997,
+		},
 		// { "name": "Microsoft .Net C#", "year": 2006 },
 		// { "name": "PHP", "year": 2004 },
-		// { "name": "Excel / Spreadsheets", "year": 2002 }
+		{ name: "Excel / Spreadsheets", year: 2002 },
 	],
 	experience: {
 		distribution: {
@@ -449,14 +455,14 @@ export const contents = {
 				sector: "Software design and consulting",
 				about: "",
 				clients: [
+					<>Itaú</>,
+					<>Changepoint</>,
+					<>Polycom</>,
 					<>Olé Studio</>,
 					<>ClickBebe</>,
 					<>Alumicentro</>,
-					<>Polycom</>,
-					<>Promoção Relâmpago Passagens</>,
 					<>Mercovino/Brindisi</>,
-					<>Changepoint</>,
-					<>Itaú</>,
+					<>Promoção Relâmpago Passagens</>,
 					<>Akua</>,
 					<>Ornitorrinco</>,
 					<>ReachLocal</>,

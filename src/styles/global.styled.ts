@@ -1,13 +1,12 @@
-import 'normalize.css';
-import { createGlobalStyle } from 'styled-components';
-import fonts from '../fonts';
-import config from './config';
+import "normalize.css";
+import { createGlobalStyle } from "styled-components";
+import fonts from "../fonts";
+import config from "./config";
 
 // =============================================================================
 
 const GlobalStyle = createGlobalStyle`
 	${fonts}
-
 
 	html, body, #root {
 		/* display: inline-block; *//*  disabled so page break can work  */
@@ -19,21 +18,21 @@ const GlobalStyle = createGlobalStyle`
 		font-size: ${config.fonts.sizes.default}mm;
 	}
 
-	@media screen {
-		body {
-			background-color: ${config.background.color};
-		}
+	ol,
+	ul {
+		margin: 0;
+		padding: 0;
 	}
-
-	@media print {
-		@page {
-			size: A4 portrait;
-			margin: 0;
-		}
-		* {
-			print-color-adjust: exact;
-			-webkit-print-color-adjust: exact;
-		}
+	li {
+		list-style-type: none;
+		list-style-position: inside;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 	}
 
 	a,
@@ -53,6 +52,23 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration:underline;
 	}
 
+	@media screen {
+		body {
+			background-color: ${config.background.color};
+		}
+	}
+
+	@media print {
+		@page {
+			/* size: A4 portrait; */
+			size: ${config.page.width}mm ${config.page.height}mm;
+			margin: 0;
+		}
+		* {
+			print-color-adjust: exact;
+			-webkit-print-color-adjust: exact;
+		}
+	}
 `;
 
 export default GlobalStyle;

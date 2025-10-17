@@ -1,7 +1,8 @@
-import { Fragment } from 'react/jsx-runtime';
+import { Fragment } from "react/jsx-runtime";
 import ReactDOMServer from "react-dom/server";
-import { Contents } from "../constants/contents";
+import { Contents } from "./contents";
 import type { Property } from "csstype";
+import type { ReactNode } from "react";
 
 // =============================================================================
 
@@ -12,7 +13,10 @@ export const calculateAge = (birthdate: string): number => {
 	let age = today.getFullYear() - birthDate.getFullYear();
 	const monthDifference = today.getMonth() - birthDate.getMonth();
 
-	if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+	if (
+		monthDifference < 0 ||
+		(monthDifference === 0 && today.getDate() < birthDate.getDate())
+	) {
 		age--;
 	}
 
@@ -32,7 +36,7 @@ export const calculateMonths = (
 	startMonth: number,
 	startYear: number,
 	endMonth: number,
-	endYear: number,
+	endYear: number
 ): number => {
 	const totalMonthsStart = startYear * 12 + startMonth;
 	const totalMonthsEnd = endYear * 12 + endMonth;
@@ -45,14 +49,14 @@ export const amountOfTime = (
 	startMonth: number,
 	startYear: number,
 	endMonth: number,
-	endYear: number,
+	endYear: number
 ): string => {
 	const months = calculateMonths(startMonth, startYear, endMonth, endYear);
-	if(months < 12){
+	if (months < 12) {
 		return `${months} months`;
 	}
-	const suffix = Math.floor(months / 12) <= 1 ? 'year': 'years'
-	if(Number.isInteger(months / 12)){
+	const suffix = Math.floor(months / 12) <= 1 ? "year" : "years";
+	if (Number.isInteger(months / 12)) {
 		return `${months / 12} ${suffix}`;
 	}
 	return `>${Math.floor(months / 12)} ${suffix}`;
@@ -60,46 +64,46 @@ export const amountOfTime = (
 
 // -----------------------------------------------------------------------------
 
-export const monthAbbr = (month: number): string => {
+export const monthName = (month: number): string => {
 	switch (month) {
 		case 1: {
-			return 'jan';
+			return "January";
 		}
 		case 2: {
-			return 'feb';
+			return "February";
 		}
 		case 3: {
-			return 'mar';
+			return "March";
 		}
 		case 4: {
-			return 'apr';
+			return "April";
 		}
 		case 5: {
-			return 'may';
+			return "May";
 		}
 		case 6: {
-			return 'jun';
+			return "June";
 		}
 		case 7: {
-			return 'jul';
+			return "July";
 		}
 		case 8: {
-			return 'aug';
+			return "August";
 		}
 		case 9: {
-			return 'sep';
+			return "September";
 		}
 		case 10: {
-			return 'oct';
+			return "October";
 		}
 		case 11: {
-			return 'nov';
+			return "November";
 		}
 		case 12: {
-			return 'dec';
+			return "December";
 		}
 	}
-	return '';
+	return "";
 };
 
 // -----------------------------------------------------------------------------
@@ -116,35 +120,54 @@ export const hashString = (str: string): number => {
 
 // -----------------------------------------------------------------------------
 
-export const contentToKey = (content: object | Array<string | number> | string | JSX.Element) =>
-	hashString(ReactDOMServer.renderToString(JSON.stringify(content)));
+export const contentToKey = (
+	content: object | Array<string | number> | ReactNode
+) => hashString(ReactDOMServer.renderToString(JSON.stringify(content)));
 
 // -----------------------------------------------------------------------------
 
 export const getTotalPages = (contents: Contents) =>
-	contents.experience.distribution.pre + contents.experience.distribution.relevant.length + contents.experience.distribution.past.length;
+	contents.experience.distribution.pre +
+	contents.experience.distribution.relevant.length +
+	contents.experience.distribution.past.length;
 
 // -----------------------------------------------------------------------------
 
-export const joinElements = (contents: (string | JSX.Element)[]): JSX.Element => (<>{
-	contents.map((item, index) => (
-		<Fragment key={contentToKey(item)}>
-			{item}
-			{index + 1 < contents.length ? (
-				<>, </>
-			) : (
-				<>.</>
-			)}
-		</Fragment>
-	))
-}</>);
+type JoinElements = (
+	contents: ReactNode[],
+	separator: ReactNode,
+	finish: ReactNode
+) => ReactNode;
+
+export const joinElements: JoinElements = (
+	contents,
+	separator = ", ",
+	finish = "."
+): JSX.Element => (
+	<>
+		{contents.map((item, index) => (
+			<Fragment key={contentToKey(item)}>
+				{item}
+				{index + 1 < contents.length ? separator : finish}
+			</Fragment>
+		))}
+	</>
+);
 
 // -----------------------------------------------------------------------------
 
-export const splitLetterSpacing = (text: string, spacings: Property.LetterSpacing[]): JSX.Element => (<>{
-	text.split('').map(
-		(letter, index) => (
-			<span style={{letterSpacing: spacings[index]}}>{letter}</span>
-		)
-	)
-}</>);
+export const splitLetterSpacing = (
+	text: string,
+	spacings: Property.LetterSpacing[]
+): JSX.Element => (
+	<>
+		{text.split("").map((letter, index) => (
+			<span
+				key={contentToKey([letter, index])}
+				style={{ letterSpacing: spacings[index] }}
+			>
+				{letter}
+			</span>
+		))}
+	</>
+);

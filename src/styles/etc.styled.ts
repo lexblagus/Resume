@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import config from './config';
+import styled from "styled-components";
+import config from "./config";
 
 // =============================================================================
 
@@ -7,16 +7,42 @@ export const TagLine = styled.div`
 	font-family: ${config.fonts.families.secondary};
 	font-size: ${config.fonts.sizes.medium}mm;
 	font-weight: 700;
-	text-shadow: ${[...Array(3)].map((_, i) => `0 0 ${i + 1}px hsla(0, 0%, 100%, 1)`).join(',')};
-`;
+	text-shadow: ${[...Array(3)]
+		.map((_, i) => `0 0 ${i + 1}px hsla(0, 0%, 100%, 1)`)
+		.join(",")};
+	line-height: 1;
+	font-style: italic;
 
-export const TagLineSpaced = styled(TagLine)`
-	margin-top: 1.5mm;
-	margin-bottom: ${config.layout.spacing.medium}mm;
-	line-height: 0.8em;
+	&.topSpaced {
+		margin-top: 1.5mm;
+	}
+
+	&.bottomSpaced {
+		margin-bottom: ${config.layout.spacing.medium}mm;
+	}
+
+	&.bottomAdjusted {
+		margin-bottom: 1mm;
+	}
+
+	&.rightAligned {
+		text-align: right;
+	}
 `;
 
 // -----------------------------------------------------------------------------
+
+export const Strong = styled.strong`
+	font-family: ${config.fonts.families.secondary};
+	font-size: ${config.fonts.sizes.default}mm;
+	font-weight: 700;
+	font-style: italic;
+	color: ${config.colors.foreground};
+`;
+
+export const Dim = styled.span`
+	color: ${config.colors.dim};
+`;
 
 export const Light = styled.span`
 	font-weight: 400;
@@ -26,14 +52,6 @@ export const Light = styled.span`
 export const Mild = styled.span`
 	color: ${config.colors.foreground};
 	font-weight: 400;
-`;
-
-export const Unwrapable = styled.span`
-	white-space: nowrap;
-`;
-
-export const Dim = styled.span`
-	color: ${config.colors.dim};
 `;
 
 export const Small = styled.span`
@@ -49,6 +67,16 @@ export const Abbr = styled.span`
 	text-transform: uppercase;
 `;
 
+export const Emphasis = styled.span`
+	display: inline-block;
+	line-height: 0.8;
+	background-color: ${config.colors.quote};
+`;
+
+export const Unwrapable = styled.span`
+	white-space: nowrap;
+`;
+
 // -----------------------------------------------------------------------------
 
 export const H1 = styled.h1`
@@ -56,9 +84,12 @@ export const H1 = styled.h1`
 	font-size: ${config.fonts.sizes.huge}mm;
 	font-style: italic;
 	font-weight: 800;
-	line-height: 0.8;
 	margin: 0;
 	word-spacing: -9mm;
+
+	&.right {
+		text-align: right;
+	}
 
 	${Light} {
 		font-weight: 400;
@@ -73,81 +104,71 @@ export const H2 = styled.h2`
 	font-size: ${config.fonts.sizes.large}mm;
 	margin: 0;
 	flex-grow: 1;
-
-	@media print {
-		color: ${config.colors.foreground};
-		background-color: ${config.colors.background};
-	}
-
+	color: ${config.colors.foreground};
+	background-color: ${config.colors.background};
 `;
 
 // -----------------------------------------------------------------------------
 
 export const H3 = styled.h3`
-	font-family: ${config.fonts.families.fancy};
-	font-style: italic;
-	font-weight: 800;
-	font-size: ${config.fonts.sizes.large}mm;
-	line-height: 1;
-	letter-spacing: -0.4mm;
-	word-spacing: 0.1em;
-	color: ${config.colors.foreground};
-	margin: 0;
+	font-family: ${config.fonts.families.secondary};
 
-	&:not(:first-child) {
-		margin-top: ${config.layout.spacing.medium}mm;
+	&.in-board {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: ${config.layout.spacing.tiny}mm;
+		font-size: ${config.fonts.sizes.medium}mm;
+		font-weight: 700;
+		line-height: 0.8;
+		font-style: italic;
+		color: ${config.colors.foreground};
+		background-color: ${config.colors.quote};
 	}
 
-	& > .slashes{
-		font-family: ${config.fonts.families.secondary};
-		font-size: 1.175em;
-		font-weight: 700;
-		color: ${config.colors.dim};
+	&.in-section {
+		margin-top: ${config.page.margin}mm;
+		margin-bottom: 0;
+		font-weight: 400;
+		font-size: ${config.fonts.sizes.large}mm;
+		font-style: italic;
+		line-height: 0.8;
+		color: ${config.colors.foreground};
+		border-bottom: 2px solid ${config.colors.dark};
 	}
 `;
 
 // -----------------------------------------------------------------------------
 
 export const H4 = styled.h4`
+	display: inline-block;
+	background-color: ${config.colors.quote};
+	padding: 0;
+	padding-right: 1mm;
+	margin-top: 0;
+	margin-bottom: 0.25em;
 	font-family: ${config.fonts.families.secondary};
-	font-size: ${config.fonts.sizes.default}mm;
-	color: ${config.colors.foreground};
-	margin: 0;
-	border-bottom: 1px solid ${config.colors.dim};
+	font-size: ${config.fonts.sizes.ample}mm;
+	line-height: 0.9;
+	font-weight: 900;
+	font-style: italic;
+	letter-spacing: -0.025em;
+	color: ${config.colors.accent};
 `;
 
 // -----------------------------------------------------------------------------
 
-export const PageNumber = styled.div`
-	/* @media print {
-		background-color: ${config.colors.background};
-		color: ${config.colors.accent};
-		border: 1px solid ${config.colors.accent};
-	} */
-	height: ${config.footer.height}mm;
-	min-width: ${config.footer.height}mm;
-	background-color: ${config.colors.accent};
+export const H5 = styled.h5`
+	display: inline-block;
+	font-size: ${config.fonts.sizes.tiny}mm;
+	font-weight: 400;
+	background-color: ${config.colors.dark};
 	color: ${config.colors.background};
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	padding: 0 2.5mm;
-	margin-top: ${config.layout.spacing.tiny}mm;
-	box-sizing: border-box;
-	font-family: ${config.fonts.families.secondary};
-`;
-
-// -----------------------------------------------------------------------------
-
-export const CurrentPage = styled.div`
-	font-size: ${config.fonts.sizes.medium}mm;
-`;
-
-// -----------------------------------------------------------------------------
-
-export const TotalPages = styled.span`
-	font-size: ${config.fonts.sizes.small}mm;
+	margin-top: 1em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	padding: 0 0.5mm;
+	line-height: 1;
+	/* border-radius: ${config.layout.borderRadius}; */
 `;
 
 // -----------------------------------------------------------------------------

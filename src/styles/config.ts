@@ -1,13 +1,13 @@
 export default {
 	colors: {
-		foreground: 'black',
-		background: 'white',
-		accent: 'black',
-		dim: 'hsla(0, 0%, 40%, 1)',
-		quote: 'hsla(0, 0%, 75%, 1)',
-		light: 'hsla(0, 0%, 90%, 1)',
-		dark: 'hsla(0, 0%, 30%, 1)',
-		link: '#005E9E',
+		foreground: "black",
+		background: "white",
+		accent: "black",
+		light: "hsla(0, 0%, 90%, 1)",
+		quote: "hsla(0, 0%, 75%, 1)",
+		dim: "hsla(0, 0%, 40%, 1)",
+		dark: "hsla(0, 0%, 30%, 1)",
+		link: "#005E9E",
 	},
 	fonts: {
 		families: {
@@ -21,42 +21,46 @@ export default {
 			'Titillium Web'
 			'Rajdhani'
 			*/
-			body: "IBM Plex Sans, serif",
-			secondary: "'Rajdhani', sans-serif",
+			body: "'IBM Plex Sans Condensed', serif",
+			secondary: "Rajdhani, sans-serif",
 			fancy: "'Bodoni Moda', serif",
 		},
 		sizes: {
-			tiny: 3.5, // mm
-			small: 4, // mm
-			default: 4.5, // mm
-			medium: 6, // mm
-			large: 10, // mm
-			huge: 35.5, // mm
+			// mm
+			tiny: 3.5,
+			small: 4,
+			default: 4.5,
+			medium: 6,
+			ample: 8,
+			large: 10,
+			huge: 35.5,
 		},
 	},
 	background: {
-		color: 'hsla(0, 0%, 85%, 1)',
+		color: "hsla(0, 0%, 85%, 1)",
 		margin: 5, // mm
 	},
 	page: {
 		width: 210, // mm
-		height: 297, // mm
+		// height: 297, // mm
+		height: 1787, // mm
 		margin: 10, // mm
-		borderColor: 'hsla(0, 0%, 50%, 1)',
-		backgroundColor: 'white',
+		borderColor: "hsla(0, 0%, 50%, 1)",
+		backgroundColor: "white",
 	},
 	layout: {
 		spacing: {
-			micro: 1, // mm
-			tiny : 2.5, // mm
-			small : 5, // mm
-			medium : 10, // mm
-			large : 20, // mm
+			// mm
+			micro: 1,
+			tiny: 2.5,
+			small: 5,
+			medium: 10,
+			large: 20,
 		},
 		breakpoints: {
-			xs : '600px',
+			xs: "600px",
 		},
-		borderRadius: '2px',
+		borderRadius: "3px",
 	},
 	elements: {
 		logo: 20, // mm
@@ -64,5 +68,5 @@ export default {
 	},
 	footer: {
 		height: 10, // mm
-	}
+	},
 };
